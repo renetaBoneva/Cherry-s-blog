@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 
 	<!-- css file connection -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="./css/style.css">
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +24,86 @@
 	<link rel="icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-	<h1>Cherry's blog</h1>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="/"><img src="./img/logo1.png"></a></li>
+				<li><a href="/catalog">Catalog</a></li>
+				<!-- Guest menu -->
+				<li><a href="/login">Login</a></li>
+				<li><a href="/register">Register</a></li>
+				<!-- Logged in user menu -->
+				<li><a href="/addRecipe">Add recipe</a></li>
+				<li><a href="/myProfile">My profile</a></li>
+				<li><a href="/logout">Logout</a></li>
+			</ul>
+		</nav>		
+	</header>
+	<main>	
+		<section id="homeSection">
+
+			<div class="wrapper">
+				<div id="first">
+					<h1>Cherry's blog</h1>
+					<div id="br"></div>
+					<button><a href="/recipes/cherryCakeID">THE BEST CHERRY CAKE</a></button>	
+				</div>
+				<div id="second">
+					<img src="img/homeImg.jpg">
+				</div>
+						
+			</div>
+		</section>		
+
+		<section id="catalogSection">
+
+			<div class="wrapper">
+			<h2>Catalog</h2>
+			<div id="recipesWrapper">
+
+					<div class="recipe">
+					<img src="./img/bananaPancakes.jpg">
+					<h3> <a href="/recipes/">Banana pancakes</a></h3>			
+					</div>
+					<div class="recipe">
+						<img src="./img/cherryCake.jpg">
+						<h3><a href="/recipes/">Cherry cake</a></h3>			
+					</div>
+					<div class="recipe">
+						<img src="./img/cherryPie.jpg">
+						<h3><a href="/recipes/">Cherry pie</a></h3>			
+					</div>
+					<div class="recipe">
+						<img src="./img/cherryCheesecake.jpg">
+						<h3><a href="/recipes/">Cherry cheesecake</a></h3>			
+					</div>
+					<div class="recipe">
+						<img src="./img/chocCherry.jpg">
+						<h3><a href="/recipes/">Chocolate cherry cheesecake</a></h3>
+					</div>
+					<div class="recipe">
+						<img src="./img/cherryMuffins.jpg">
+						<h3><a href="/recipes/">Cherry muffins</a></h3>
+					</div>
+
+			</div>
+			</div>
+			
+		</section>
+	</main>
+
+	<footer>
+		<div class="wrapper">
+			<p>Created by Reneta Boneva</p>
+			<div>
+				<a href="https://www.linkedin.com/in/reneta-boneva-39bb72259/">
+					<i class="bi bi-linkedin"></i>
+				</a>
+				<a href="https://github.com/renetaBoneva">
+					<i class="bi bi-github"></i>
+				</a>		
+			</div>			 
+		</div>		
+	</footer>
 </body>
 </html>

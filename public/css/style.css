@@ -9,10 +9,289 @@ font-family: 'Philosopher', sans-serif;*/
 	padding: 0;
 	box-sizing: border-box;
 }
+main {
+	width: 100%;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: center;
 	background-color: #C6CACB;
+	overflow-x: hidden;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.wrapper{
+	width: 1896px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    padding: 88px 158px 88px 158px;
+}
+
+
+h2 {
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 112px;
+	line-height: 125px;
+	text-shadow: -12px 4px 4px rgba(183, 211, 182, 1);
+}
+
+/*---------------
+	Navigation
+---------------*/
+nav {
+	width: 1576px;
+	background: #FFFFFF;
+	border-radius: 50px;
+	margin-top: 72px;
+}
+
+nav ul {
+	display: flex;	
+	flex-wrap: wrap;
+	align-content: center;
+    justify-content: flex-start;
+    padding-right: 36px;
+}
+
+nav ul li:first-child {
+	margin-right: 35%;
+
+}
+
+nav ul li {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+    align-content: center;
+}
+
+nav ul li a {
+	text-decoration: none;
+	text-align: center;
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 49px;
+	color: #E78DBD;
+	display: flex;
+	align-content: center;	
+    margin: 0px 16px 0px 16px;
+}
+
+nav img {
+	height: 100px;
+	margin: 10px 0px 10px 32px;
+}
+
+/*---------------
+	Home page
+---------------*/
+h1 {
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 124px;
+	line-height: 139px;
+	color: #EFF171;
+	text-shadow: -12px 4px 4px rgba(231, 141, 189, 1);
+}
+
+#homeSection .wrapper {
+	display: flex;
+	flex-direction: row; 
+  	flex-wrap: wrap;
+	justify-content: space-around;	
+  	align-content: space-between;
+    align-items: flex-start;
+}
+
+#homeSection #first {
+	width: 30%;
+}
+
+#homeSection #first #br {	
+    margin-top: 55%;
+	width: 100%;
+	height: 4px;
+	background: #15491B;
+}
+
+#homeSection #first button {
+	margin-top: 30px;    
+    background: #E78DBD;
+    border-radius: 50px;
+    padding: 17px;
+    border: none;
+    width: 100%;
+}
+
+#homeSection #first button a {
+	text-decoration: none;
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    color: #EFF171;
+}
+
+#homeSection #first button:hover {
+	background-color: #15491B;
+}
+
+#homeSection #second {
+	width: 60%;
+}
+
+#homeSection #second img {
+	width: 100%;
+	border-radius: 50px;
+	filter: drop-shadow( -20px 20px 0px rgba(231, 141, 189, 1));
+}
+
+/*---------------
+	Catalog
+---------------*/
+#catalogSection {
+	background: #EFF171;
+}
+
+h2 {
+	color: #E78DBD;
+}
+
+#recipesWrapper {
+	margin-top: 88px;
+	display: flex;
+  	flex-wrap: wrap;
+	justify-content: space-around;	
+  	align-content: space-between;
+	width: 100%;
+}
+
+.recipesRow {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	padding-bottom: 72px;
+}
+
+.recipe {
+	background: #B7D3B6;
+	border-radius: 50px;
+	justify-content: center;
+	width: 30%;
+	min-height: 600px;
+    margin-bottom: 72px;
+}
+
+.recipe img {
+	height: 470px;
+	width: 100%;
+	border-radius: 50px;
+  	object-fit: cover;
+}
+
+.recipe h3 {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.recipe h3 a {
+	text-decoration: none;
+	height: 132px;
+	width: 100%;
+
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 49px;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	text-align: center;
+	color: #15491B;
+}
+
+.recipe h3 a:hover {
+	font-size: 52px;
+}
+
+
+/*---------------
+	Footer
+---------------*/
+footer {
+	width: 100%;
+	background-color: #15491B;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+footer .wrapper {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+    padding: 48px 158px 48px 158px;
+}
+
+footer .wrapper p {
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 49px;
+	text-align: center;
+	color: #EFF171;
+
+	margin-bottom: 24px;
+}
+
+footer .wrapper i {
+	font-size: 68px;
+	color: #EFF171;
+	padding: 10px;
+}
+
+@media (max-width: 1896px) {
+	.wrapper{
+		width: 100%;
+	}
+
+}
+
+@media (max-width: 1700px) {
+
+}
+
+@media (max-width: 1272px) {
+
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 600px) {
+
 }
