@@ -1,0 +1,18 @@
+/*font-family: 'Cormorant Infant', serif;
+font-family: 'Philosopher', sans-serif;*/
+
+/*---------------
+	General
+---------------*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	background-color: #C6CACB;
+}
