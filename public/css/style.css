@@ -57,6 +57,9 @@ nav {
 	background: #FFFFFF;
 	border-radius: 50px;
 	margin-top: 72px;
+	display: flex;	
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav ul {
@@ -65,11 +68,6 @@ nav ul {
 	align-content: center;
     justify-content: flex-start;
     padding-right: 36px;
-}
-
-nav ul li:first-child {
-	margin-right: 35%;
-
 }
 
 nav ul li {
