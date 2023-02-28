@@ -53,7 +53,7 @@ h2 {
 	Navigation
 ---------------*/
 nav {
-	width: 1576px;
+	width: 100%;
 	background: #FFFFFF;
 	border-radius: 50px;
 	margin-top: 72px;
@@ -95,6 +95,12 @@ nav ul li a {
 nav img {
 	height: 100px;
 	margin: 10px 0px 10px 32px;
+}
+
+nav.wrapper {	
+	padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 /*---------------
@@ -233,6 +239,7 @@ h2 {
 .recipe h3 a:hover {
 	font-size: 52px;
 }
+
 
 
 /*---------------
