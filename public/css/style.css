@@ -97,7 +97,8 @@ nav img {
 	margin: 10px 0px 10px 32px;
 }
 
-nav.wrapper {	
+nav.wrapper {
+	width: 1580px;	
 	padding: 0;
     flex-direction: row;
     justify-content: space-between;
@@ -281,6 +282,10 @@ footer .wrapper i {
 
 @media (max-width: 1896px) {
 	.wrapper{
+		width: 100%;
+	}
+
+	nav.wrapper {
 		width: 100%;
 	}
 
