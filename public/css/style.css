@@ -185,7 +185,7 @@ h2 {
 	margin-top: 88px;
 	display: flex;
   	flex-wrap: wrap;
-	justify-content: space-around;	
+	justify-content: space-between;	
   	align-content: space-between;
 	width: 100%;
 }

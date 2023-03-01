@@ -1,0 +1,93 @@
+/*------------------
+	Profile page
+------------------*/
+
+body {
+	background-color: #E78DBD;
+}
+
+main {	
+    display: flex;
+    justify-content: center;
+}
+
+#profileDiv {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+
+	width: 100%;
+	background: #B7D3B6;
+	border-radius: 50px;
+	padding: 80px 48px;
+	margin-bottom: 40px;
+}
+
+#profileDiv #profileImg {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+
+	background: #D9D9D9;
+    border-radius: 128px;
+    width: 242px;
+    height: 242px;
+	color: #15491B;
+	font-size: 136px;
+}
+
+#profileDiv #profileInfo {	
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+    justify-content: space-around;
+	align-content: space-between;
+	width: 76%;
+}
+
+#profileDiv #profileInfo .infoDiv {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+    width: 90%;
+}
+
+.infoDiv p:first-child {
+	width: 22%;
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 48px;
+	color: #000000;
+}
+
+.infoDiv p:last-child {
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 48px;
+	color: #15491B;
+}
+
+#editIcons {
+	width: 4%;
+	text-align: right;
+	font-size: 32px;
+	color: #15491B;	
+}
+
+#yourRecipes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+
+#yourRecipes h2 {
+	color: #EFF171;
+}
