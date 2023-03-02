@@ -1,0 +1,39 @@
+
+/*---------------
+   Details page
+---------------*/
+
+/*------------------
+   Register page
+------------------*/
+body {
+	background-image: url('../img/greenPinkBgr.png');
+}
+
+main {	
+    display: flex;
+    justify-content: center;
+}
+
+#addRecipeSection form {
+	background: #E78DBD;
+}
+
+#addRecipeSection form h2 {
+	color: #EFF171;
+    text-align: center;
+}
+
+#addRecipeSection form input[type="submit"] {
+	background: #EFF171;
+	color: #15491B;
+} 
+
+#addRecipeSection form input[type="submit"]:hover {
+	background: #15491B;
+	color: #EFF171;
+}
+
+#addRecipeSection form input[name="ingredients"], #addRecipeSection form input[name="method"] {
+	height: 200px;
+}

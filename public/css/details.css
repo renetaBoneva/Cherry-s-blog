@@ -165,6 +165,7 @@ body {
 	flex-wrap: wrap;
 	flex-direction: row;
     justify-content: space-between;
+    width: 100%;
 }
 
 #comments form textarea {
