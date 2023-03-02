@@ -13,6 +13,7 @@
 
 	<!-- css file connection -->
 	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/register.css">
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,59 +47,31 @@
 			</div>
 		</nav>		
 	</header>
-	<main>	
-		<section id="homeSection">
+	<main>
+		
+		<section id="registerSection" class="wrapper">
+			<form>
+				<h2>Register</h2>
+				<label>Username: </label>
+				<input type="text" name="username">
+				<label>E-mail: </label>
+				<input type="text" name="email">
+				<label>Password: </label>
+				<input type="password" name="password">
+				<label>Repeat password: </label>
+				<input type="password" name="rePass">
+				<label>Location: </label>
+				<input type="text" name="location">
+				<label>Image: </label>
+				<input type="text" name="image">
+				<label>Level: </label>
+				<input type="text" name="level">
 
-			<div class="wrapper">
-				<div id="first">
-					<h1>Cherry's blog</h1>
-					<div id="br"></div>
-					<button><a href="./details.html">THE BEST CHERRY CAKE</a></button>	
-				</div>
-				<div id="second">
-					<img src="img/homeImg.jpg">
-				</div>
-						
-			</div>
-		</section>		
-
-		<section id="catalogSection">
-
-			<div class="wrapper">
-			<h2>Catalog</h2>
-			<div id="recipesWrapper">
-
-					<div class="recipe">
-					<img src="./img/bananaPancakes.jpg">
-					<h3> <a href="/recipes/">Banana pancakes</a></h3>			
-					</div>
-					<div class="recipe">
-						<img src="./img/cherryCake.jpg">
-						<h3><a href="/recipes/">Cherry cake</a></h3>			
-					</div>
-					<div class="recipe">
-						<img src="./img/cherryPie.jpg">
-						<h3><a href="/recipes/">Cherry pie</a></h3>			
-					</div>
-					<div class="recipe">
-						<img src="./img/cherryCheesecake.jpg">
-						<h3><a href="/recipes/">Cherry cheesecake</a></h3>			
-					</div>
-					<div class="recipe">
-						<img src="./img/chocCherry.jpg">
-						<h3><a href="/recipes/">Chocolate cherry cheesecake</a></h3>
-					</div>
-					<div class="recipe">
-						<img src="./img/cherryMuffins.jpg">
-						<h3><a href="/recipes/">Cherry muffins</a></h3>
-					</div>
-
-			</div>
-			</div>
-			
+				<input type="submit" value="SUBMIT">
+			</form>			
 		</section>
-	</main>
 
+	</main>
 	<footer>
 		<div class="wrapper">
 			<p>Created by Reneta Boneva</p>

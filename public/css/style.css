@@ -170,6 +170,62 @@ h1 {
 	filter: drop-shadow( -20px 20px 0px rgba(231, 141, 189, 1));
 }
 
+form label {
+	width: 100%;
+    margin-top: 36px;
+    padding-left: 24px;
+
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 40px;
+	color: #15491B;
+}
+
+form input[type="text"], form input[type="password"] {
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 40px;
+
+	width: 100%;
+	padding: 8px 24px;
+	height: 64px;
+	background: #FFFFFF;
+	border-radius: 50px;
+	border: none;
+}
+
+form input[type="submit"] {
+	width: 40%;
+	min-width: 190px;
+	border-radius: 50px;
+    margin-bottom: 16px;
+    margin-top: 36px;
+    border: none;
+    padding: 12px 16px;
+
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 49px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 48%;
+	padding: 20px 32px;
+	border-radius: 50px;
+}
 /*---------------
 	Catalog
 ---------------*/

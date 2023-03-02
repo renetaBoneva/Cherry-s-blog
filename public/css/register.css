@@ -1,0 +1,30 @@
+/*------------------
+   Register page
+------------------*/
+body {
+	background-image: url('../img/yellowPinkBgr.png');
+}
+
+main {	
+    display: flex;
+    justify-content: center;
+}
+
+#registerSection form {
+	background: #E78DBD;
+}
+
+#registerSection form h2 {
+	color: #EFF171;
+    text-align: center;
+}
+
+#registerSection form input[type="submit"] {
+	background: #B7D3B6;
+	color: #15491B;
+} 
+
+#registerSection form input[type="submit"]:hover {
+	background: #15491B;
+	color: #B7D3B6;
+}
