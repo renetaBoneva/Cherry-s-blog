@@ -1,0 +1,38 @@
+/*------------------
+     Edit page
+------------------*/
+body {
+	background-image: url('../img/yellowPinkBgr.png');
+}
+
+main {	
+    display: flex;
+    justify-content: center;
+}
+
+#editRecipeSection form {
+	background: #B7D3B6;
+}
+
+#editRecipeSection form h2 {
+	color: #EFF171;
+	text-shadow: -12px 4px 4px rgba(231, 141, 189, 1);
+}
+
+form input[type="text"]{
+	color: #B7D3B6;
+}
+
+#editRecipeSection form input[type="submit"] {
+	background: #EFF171;
+	color: #E78DBD;
+} 
+
+#editRecipeSection form input[type="submit"]:hover {
+	background: #E78DBD;
+	color: #EFF171;
+}
+
+#editRecipeSection form input[name="ingredients"], #editRecipeSection form input[name="method"] {
+	height: 200px;
+}
