@@ -13,7 +13,7 @@
 
 	<!-- css file connection -->
 	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="./css/profile.css">
+	<link rel="stylesheet" href="./css/editProfile.css">
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,60 +43,34 @@
 				<li><a href="./addRecipe.html">Add recipe</a></li>
 				<li><a href="./profile.html">My profile</a></li>
 				<li><a href="/logout">Logout</a></li>
-			</ul>			
+			</ul>				
 			</div>
 		</nav>		
 	</header>
 	<main>
-		<section id="myProfileSection" class="wrapper">
-		<div id="profileDiv">
-			<div id="profileImg">
-				<i class="bi bi-person-fill"></i>		
-			</div>
-			<div id="profileInfo">
-				<div class="infoDiv">
-					<p>Username: </p>
-					<p>Reneta Boneva</p>
-				</div>
-				<div class="infoDiv">
-					<p>Level: </p>
-					<p>Beginner</p>
-				</div>
-				<div class="infoDiv">
-					<p>Location: </p>
-					<p>Burgas, Bulgaria</p>
-				</div>
-				<div class="infoDiv">
-					<p>E-mail: </p>
-					<p>reneta.boneva@abv.bg</p>
-				</div>
-				
-			</div>	
-			<div id="editIcons">
-				<a href="./editProfile.html">
-				<i class="bi bi-pencil-fill"></i></a>	
-			</div>		
-		</div>
-		<div id="yourRecipes">
-			<h2>Your recipes</h2>
+		
+		<section id="editSection" class="wrapper">
+			<form>
+				<h2>Edit profile</h2>
+				<label>Username: </label>
+				<input type="text" name="username" value="Reneta Boneva">
+				<label>E-mail: </label>
+				<input type="text" name="email" value="reneta.boneva@abv.bg">
+				<label>Old password: </label>
+				<input type="password" name="password">
+				<label>New password: </label>
+				<input type="password" name="rePass">
+				<label>Location: </label>
+				<input type="text" name="location" value="Burgas, Bulgaria">
+				<label>Image: </label>
+				<input type="text" name="image" value="" alt="profilePhoto">
+				<label>Level: </label>
+				<input type="text" name="level" value="Beginner">
 
-			<div id="recipesWrapper">
-					<div class="recipe">
-						<img src="./img/cherryCake.jpg">
-						<h3><a href="/recipes/">Cherry cake</a></h3>			
-					</div>
-					<div class="recipe">
-						<img src="./img/cherryPie.jpg">
-						<h3><a href="/recipes/">Cherry pie</a></h3>			
-					</div>
-					<div class="recipe">
-						<img src="./img/chocCherry.jpg">
-						<h3><a href="/recipes/">Chocolate cherry cheesecake</a></h3>
-					</div>
-			</div>
-		</div>
-			
-		</section>		
+				<input type="submit" value="SUBMIT">
+			</form>			
+		</section>
+
 	</main>
 	<footer>
 		<div class="wrapper">

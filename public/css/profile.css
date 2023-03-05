@@ -78,6 +78,9 @@ main {
 	width: 4%;
 	text-align: right;
 	font-size: 32px;
+}
+
+#editIcons a {
 	color: #15491B;	
 }
 

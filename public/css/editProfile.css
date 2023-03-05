@@ -1,0 +1,34 @@
+/*------------------
+   Edit profile page
+------------------*/
+body {
+	background-image: url('../img/yellowGreenBgr.png');
+}
+
+main {	
+    display: flex;
+    justify-content: center;
+}
+
+form input[type="text"], form input[type="password"]{
+	color: #15491B;
+}
+
+#editSection form {
+	background: #E78DBD;
+}
+
+#editSection form h2 {
+	color: #EFF171;
+    text-align: center;
+}
+
+#editSection form input[type="submit"] {
+	background: #B7D3B6;
+	color: #15491B;
+} 
+
+#editSection form input[type="submit"]:hover {
+	background: #15491B;
+	color: #B7D3B6;
+}
