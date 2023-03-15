@@ -10,7 +10,7 @@ main {
     justify-content: center;
 }
 
-form input[type="text"], form input[type="password"]{
+#editSection form input[type="text"], #editSection form input[type="password"]{
 	color: #15491B;
 }
 
