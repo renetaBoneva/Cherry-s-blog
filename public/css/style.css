@@ -121,13 +121,19 @@ h1 {
 	display: flex;
 	flex-direction: row; 
   	flex-wrap: wrap;
-	justify-content: space-around;	
+	justify-content: space-between;	
   	align-content: space-between;
     align-items: flex-start;
 }
 
 #homeSection #first {
 	width: 30%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
 }
 
 #homeSection #first #br {	
@@ -336,18 +342,8 @@ footer .wrapper i {
 	padding: 10px;
 }
 
-@media (max-width: 1896px) {
-	.wrapper{
-		width: 100%;
-	}
 
-	nav.wrapper {
-		width: 100%;
-	}
-
-}
-
-@media (max-width: 1700px) {
+/*@media (max-width: 1700px) {
 
 }
 
@@ -359,5 +355,86 @@ footer .wrapper i {
 }
 
 @media (max-width: 600px) {
+
+}
+*/
+
+@media (max-width: 1440px) {
+
+	.wrapper {
+		width: 100%;
+	    padding: 40px 48px;
+	}
+
+	/*-------------------
+		  Navigation 
+	-------------------*/
+	header {
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	nav img {
+    	height: 60px;
+	}
+
+	nav.wrapper {
+	    width: 92%;
+	    margin: 0px 40px;
+	}
+
+	nav ul li a {
+	    font-size: 28px;
+	    margin: 0px 12px 0px 12px;
+	}
+
+
+	/*-------------------
+		Catalog page 
+	-------------------*/
+	h1 {
+	    font-size: 100px;
+	    line-height: 90px;
+	}
+
+	#homeSection #first #br {
+	    margin-top: 0%;
+	}
+
+	#homeSection #first button a {
+		font-size: 24px;
+	}
+
+	#homeSection #first {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+}
+}
+
+@media (max-width: 1250px) {
+	h1 {
+	    font-size: 84px;
+	}
+
+	#homeSection #first button a {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 681px) and (max-width: 1000px) {
+
+}
+
+
+@media (max-width: 680px) {
+
+}
+
+
+@media (max-width: 425px) {
 
 }
