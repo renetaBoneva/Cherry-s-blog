@@ -14,7 +14,7 @@ main {
 	background-color: #EFF171;
 }
 
-form input[type="text"]{
+#editRecipeSection form input[type="text"]{
 	color: #B7D3B6;
 }
 

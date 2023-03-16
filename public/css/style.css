@@ -176,6 +176,10 @@ h1 {
 	filter: drop-shadow( -20px 20px 0px rgba(231, 141, 189, 1));
 }
 
+.recipe:last-child {
+	margin-bottom: 0px;
+}
+
 form label {
 	width: 100%;
     margin-top: 36px;
@@ -241,6 +245,10 @@ form {
 
 h2 {
 	color: #E78DBD;
+}
+
+#catalogSection .wrapper{
+	padding-bottom: 0px;
 }
 
 #recipesWrapper {
@@ -358,12 +366,15 @@ footer .wrapper i {
 
 }
 */
-
-@media (max-width: 1440px) {
-
+@media (max-width: 1896px) {	
 	.wrapper {
 		width: 100%;
 	    padding: 40px 48px;
+	}
+
+	h2 {
+		font-size: 80px;
+		line-height: 100px
 	}
 
 	/*-------------------
@@ -387,32 +398,63 @@ footer .wrapper i {
 	    font-size: 28px;
 	    margin: 0px 12px 0px 12px;
 	}
+}
 
-
-	/*-------------------
-		Catalog page 
-	-------------------*/
+@media (max-width: 1440px) {
+	
 	h1 {
 	    font-size: 100px;
 	    line-height: 90px;
 	}
 
+	/*-------------------
+		Catalog page 
+	-------------------*/
 	#homeSection #first #br {
-	    margin-top: 0%;
+	    margin-top: 30%;
 	}
 
 	#homeSection #first button a {
 		font-size: 24px;
 	}
 
-	#homeSection #first {
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-between;
-    justify-content: space-between;
-}
+	#recipesWrapper {
+    	margin-top: 40px;
+	}
+
+	.recipe {
+	    width: 32%;
+	    height: 400px;
+    	min-height: fit-content;
+	    margin-bottom: 40px;
+	}
+		
+	.recipe img {
+	    height: 72%;
+	}
+
+	.recipe h3 a {
+	    height: 80px;
+	    font-size: 34px;
+	    line-height: 40px;
+	}
+
+	/*-------------------
+		   Footer 
+	-------------------*/
+	footer .wrapper {
+	    padding: 28px 158px;
+	}
+
+	footer .wrapper p {
+		font-size: 28px;
+		margin-bottom: 12px;
+	}
+
+	footer .wrapper i {
+    	font-size: 48px;
+	}
+
 }
 
 @media (max-width: 1250px) {
@@ -423,6 +465,10 @@ footer .wrapper i {
 	#homeSection #first button a {
 		font-size: 20px;
 	}
+
+	.recipe h3 a {
+    	font-size: 28px;
+    }
 }
 
 @media (min-width: 681px) and (max-width: 1000px) {
