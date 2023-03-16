@@ -19,7 +19,7 @@ main {
 	text-shadow: -12px 4px 4px rgba(231, 141, 189, 1);
 }
 
-form input[type="text"]{
+#editRecipeSection form input[type="text"]{
 	color: #B7D3B6;
 }
 

@@ -176,10 +176,6 @@ h1 {
 	filter: drop-shadow( -20px 20px 0px rgba(231, 141, 189, 1));
 }
 
-.recipe:last-child {
-	margin-bottom: 0px;
-}
-
 form label {
 	width: 100%;
     margin-top: 36px;
@@ -394,9 +390,11 @@ footer .wrapper i {
 	    margin: 0px 40px;
 	}
 
-	nav ul li a {
-	    font-size: 28px;
-	    margin: 0px 12px 0px 12px;
+	/*-------------------
+		Catalog page 
+	-------------------*/
+	#recipesWrapper {
+    	margin-top: 40px;
 	}
 }
 
@@ -405,6 +403,23 @@ footer .wrapper i {
 	h1 {
 	    font-size: 100px;
 	    line-height: 90px;
+	}
+
+	form label {
+		font-size: 28px;
+	}
+
+	form input[type="submit"] {
+	    font-size: 36px;
+	    line-height: 36px;
+	}
+
+	/*-------------------
+		Navigation 
+	-------------------*/
+	nav ul li a {
+	    font-size: 28px;
+	    margin: 0px 12px 0px 12px;
 	}
 
 	/*-------------------
@@ -416,10 +431,6 @@ footer .wrapper i {
 
 	#homeSection #first button a {
 		font-size: 24px;
-	}
-
-	#recipesWrapper {
-    	margin-top: 40px;
 	}
 
 	.recipe {
@@ -440,19 +451,24 @@ footer .wrapper i {
 	}
 
 	/*-------------------
+		 Login page 
+	-------------------*/
+
+
+	/*-------------------
 		   Footer 
 	-------------------*/
 	footer .wrapper {
-	    padding: 28px 158px;
+	    padding: 24px 158px;
 	}
 
 	footer .wrapper p {
-		font-size: 28px;
-		margin-bottom: 12px;
+		font-size: 24px;
+		margin-bottom: 0px;
 	}
 
 	footer .wrapper i {
-    	font-size: 48px;
+    	font-size: 40px;
 	}
 
 }
@@ -460,6 +476,10 @@ footer .wrapper i {
 @media (max-width: 1250px) {
 	h1 {
 	    font-size: 84px;
+	}
+
+	form {
+	    width: 68%;
 	}
 
 	#homeSection #first button a {
