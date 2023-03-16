@@ -2,12 +2,6 @@
 /*---------------
    Details page
 ---------------*/
-
-
-body {
-	background-color: #C6CACB;
-}
-
 #detailsSection .wrapper {
 	display: flex;
 	flex-direction: column;

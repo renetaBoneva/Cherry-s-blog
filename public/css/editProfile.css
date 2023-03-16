@@ -1,15 +1,6 @@
 /*------------------
    Edit profile page
 ------------------*/
-body {
-	background-image: url('../img/yellowGreenBgr.png');
-}
-
-main {	
-    display: flex;
-    justify-content: center;
-}
-
 #editSection form input[type="text"], #editSection form input[type="password"]{
 	color: #15491B;
 }

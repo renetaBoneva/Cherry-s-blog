@@ -1,14 +1,7 @@
 /*------------------
      Edit page
 ------------------*/
-body {
-	background-image: url('../img/yellowPinkBgr.png');
-}
 
-main {	
-    display: flex;
-    justify-content: center;
-}
 
 #editRecipeSection form {
 	background: #B7D3B6;
@@ -19,7 +12,7 @@ main {
 	text-shadow: -12px 4px 4px rgba(231, 141, 189, 1);
 }
 
-#editRecipeSection form input[type="text"]{
+#editRecipeSection form input[type="text"], #editRecipeSection form textarea{
 	color: #B7D3B6;
 }
 
@@ -33,6 +26,6 @@ main {
 	color: #EFF171;
 }
 
-#editRecipeSection form input[name="ingredients"], #editRecipeSection form input[name="method"] {
+#editRecipeSection form textarea[name="ingredients"], #editRecipeSection form textarea[name="method"] {
 	height: 200px;
 }

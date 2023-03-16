@@ -1,15 +1,6 @@
 /*------------------
    Edit profile page
 ------------------*/
-body {
-	background-color: #E78DBD;
-}
-
-main {	
-    display: flex;
-    justify-content: center;
-}
-
 #errorSection h2 {
 	color: #EFF171;
 	padding-bottom: 24px;

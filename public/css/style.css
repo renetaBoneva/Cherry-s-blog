@@ -18,7 +18,6 @@ body {
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: center;
-	background-color: #C6CACB;
 	overflow-x: hidden;
 }
 
@@ -204,6 +203,21 @@ form input[type="text"], form input[type="password"] {
 	border: none;
 }
 
+form textarea {
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 40px;
+
+	width: 100%;
+	padding: 8px 24px;
+	height: 64px;
+	background: #FFFFFF;
+	border-radius: 50px;
+	border: none;
+}
+
 form input[type="submit"] {
 	width: 40%;
 	min-width: 190px;
@@ -232,6 +246,7 @@ form {
 	padding: 20px 32px;
 	border-radius: 50px;
 }
+
 /*---------------
 	Catalog
 ---------------*/
@@ -451,9 +466,53 @@ footer .wrapper i {
 	}
 
 	/*-------------------
-		 Login page 
+		Details page 
 	-------------------*/
+	#nameDiv h2 {
+	    font-size: 100px;
+	}
 
+	#description p {
+	    font-size: 28px;
+	    line-height: 40px;
+	}
+
+	#detailsSection h3 {
+	    font-size: 48px;
+	}
+
+	#detailsSection h3 {
+		padding-bottom: 0px;
+	}
+
+
+	#comments h3 {
+		padding-bottom: 16px;
+	}
+
+	.comPlace {
+	    width: 74%;
+	}
+
+	.comPlace .content {
+	    font-size: 28px;
+	}
+	.comPlace .name {
+	    font-size: 32px;
+	}
+
+	/*-------------------
+		Profile page 
+	-------------------*/
+	.infoDiv p:first-child {
+    	margin-left: 5%;
+	    width: 30%;
+	    font-size: 32px;
+	}
+
+	.infoDiv p:last-child {
+	    font-size: 36px;
+	}
 
 	/*-------------------
 		   Footer 

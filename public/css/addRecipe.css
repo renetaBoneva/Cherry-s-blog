@@ -2,15 +2,6 @@
 /*------------------
    Register page
 ------------------*/
-body {
-	background-image: url('../img/greenPinkBgr.png');
-}
-
-main {	
-    display: flex;
-    justify-content: center;
-}
-
 #addRecipeSection form {
 	background: #E78DBD;
 }
@@ -30,6 +21,6 @@ main {
 	color: #EFF171;
 }
 
-#addRecipeSection form input[name="ingredients"], #addRecipeSection form input[name="method"] {
+#addRecipeSection form textarea[name="ingredients"], #addRecipeSection form textarea[name="method"] {
 	height: 200px;
 }

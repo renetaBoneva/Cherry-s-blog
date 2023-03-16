@@ -1,15 +1,6 @@
 /*------------------
    Register page
 ------------------*/
-body {
-	background-image: url('../img/yellowPinkBgr.png');
-}
-
-main {	
-    display: flex;
-    justify-content: center;
-}
-
 #registerSection form {
 	background: #E78DBD;
 }

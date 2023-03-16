@@ -1,15 +1,6 @@
 /*------------------
 	Login page
 ------------------*/
-body {
-	background-image: url('../img/pinkYellowBgr.png');
-}
-
-main {	
-    display: flex;
-    justify-content: center;
-}
-
 #loginSection form {
 	background-color: #EFF171;
 }
