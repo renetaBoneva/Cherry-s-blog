@@ -632,12 +632,12 @@ footer .wrapper i {
 	}
 
 	form input[type="text"], form input[type="password"] {
-	    font-size: 24px;
+	    font-size: 22px;
 	    height: 44px;
 	}
 
 	form textarea {
-	    font-size: 30px;
+	    font-size: 22px;
 	}
 
 	form input[type="submit"] {
@@ -645,6 +645,13 @@ footer .wrapper i {
     	padding: 4px 16px;
 	}
 
+	#deleteRecipeSection form h2 {
+	    text-shadow: -6px 4px 4px rgba(183, 211, 182, 1);
+	}
+
+	#editRecipeSection form h2 {
+	    text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
+	}
 
 	/*-------------------
 		  Home page 
@@ -730,14 +737,103 @@ footer .wrapper i {
 	#iconsDiv i {
 	    font-size: 24px;
 	}
+
+	#description p {
+	    font-size: 20px;
+	    line-height: 36px;
+	}
+
+	#detailsSection h3 {
+	    font-size: 40px;
+    	line-height: 64px;
+	}
+
+	#nameDiv h2 {
+	    text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
+	}
+
+	.comment {
+		padding: 16px;
+	}
+
+	.imgPlace {
+	    height: 100px;
+	    width: 100px;
+	    font-size: 60px;
+	}
+
+	.comPlace .name {
+	    font-size: 24px;
+	}
+
+	.comPlace .content {
+	    font-size: 22px;
+	}
+
+	#comments {
+		padding: 24px;
+	}
+
+	#comments form textarea {
+	    font-size: 22px;
+	}
+
+	#newCommentForm {
+		padding: 0px;
+		padding-left: 12px;
+	}
+
+	#comments form button {
+	    font-size: 32px;
+	}
+
+	/*--------------
+		 Footer
+	--------------*/
+	footer .wrapper p {
+    font-size: 20px;
 }
 
 
 @media (max-width: 680px) {
+	.wrapper {
+	    width: 100%;
+	    padding: 24px;
+	}
 
+	nav.wrapper {
+    	margin: 0% 2%;
+	}
+
+	nav {
+	    margin-top: 72px;
+	}
+
+	#homeSection .wrapper {
+	    flex-direction: column;
+	    align-content: center;
+	}
+
+	#homeSection #first {
+	    width: 100%;
+	    height: auto; 
+	    justify-content: center;
+	}
+
+	#homeSection #first #br {
+	    display: none;
+	}
+
+	#homeSection #first button {
+		display: none;
+	}
+
+	#homeSection #first {
+	    align-content: center;
+	}
 }
 
 
 @media (max-width: 425px) {
-
+	
 }
