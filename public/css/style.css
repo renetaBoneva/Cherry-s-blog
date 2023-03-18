@@ -465,6 +465,12 @@ footer .wrapper i {
 	    line-height: 40px;
 	}
 
+	.recipe h3 a:hover {
+	    font-size: 38px;
+	}
+
+
+
 	/*-------------------
 		Details page 
 	-------------------*/
@@ -575,8 +581,155 @@ footer .wrapper i {
     }
 }
 
-@media (min-width: 681px) and (max-width: 1000px) {
+@media (max-width: 1000px) {
+	nav.wrapper {
+	    flex-direction: column;
+	}
 
+	nav img {
+	    margin: 10px 0px;
+	}
+
+	nav ul {
+		display: none;
+	    padding-right: 0px;
+    	flex-direction: column;
+	}
+
+	nav:hover #navUL {
+		display: block;
+	}
+
+	nav ul li a {
+	    font-size: 24px;
+	    margin: 0px 8px ;
+	}
+
+	nav img {
+	    height: 44px;
+	}
+
+
+	h1 {
+	    font-size: 54px;
+    	line-height: 60px;    
+    	text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
+	}
+
+	h2 {
+	    font-size: 64px;
+	    line-height: 36px;
+	    text-shadow: -6px 4px 4px rgba(183, 211, 182, 1);
+	}
+
+	form {
+	    width: 100%;
+	}
+
+	form label {
+	    margin-top: 12px;	    
+   		font-size: 20px;
+	}
+
+	form input[type="text"], form input[type="password"] {
+	    font-size: 24px;
+	    height: 44px;
+	}
+
+	form textarea {
+	    font-size: 30px;
+	}
+
+	form input[type="submit"] {
+	    font-size: 28px;	    
+    	padding: 4px 16px;
+	}
+
+
+	/*-------------------
+		  Home page 
+	-------------------*/
+	#homeSection #first button a {
+		font-size: 12px;
+		line-height: 12px;
+    }
+
+	#homeSection #first button {
+		padding: 8px;
+		margin-top: 24px;
+	}
+
+	#homeSection #first #br {
+	    height: 2px;
+	}
+
+	/*-------------------
+		  Catalog page 
+	-------------------*/
+	.recipe img {
+	    height: 68%;
+	}
+	.recipe {
+	    height: 240px;
+	}
+
+	.recipe h3 a {
+	    height: 64px;
+	    font-size: 22px;
+	    line-height: 26px;
+	}
+
+	.recipe h3 a:hover {		
+	    font-size: 24px;
+	}
+
+	#addRecipeSection .wrapper {
+	    padding: 30px 48px;
+	}
+
+	/*-------------------
+		Profile page 
+	-------------------*/
+	#myProfileSection.wrapper {
+	    padding: 40px 48px 0px 48px;
+	}
+
+	#profileDiv #profileInfo {
+	    width: 100%;
+    	margin-top: 20px;
+	}
+
+	#profileDiv {
+		padding: 20px 32px;
+    	align-items: center;
+    	flex-direction: column;
+	}
+
+	.infoDiv p:first-child {
+	    font-size: 20px;
+    	padding-right: 3%;
+	}
+
+	.infoDiv p:last-child {
+	    font-size: 24px;
+	}
+
+	#editIcons {
+	    margin-top: 8px;
+	    font-size: 24px;
+	}
+
+	/*-------------------
+		Details page 
+	-------------------*/
+	#nameDiv h2 {
+	    font-size: 64px;
+    	line-height: 72px;
+	}
+
+	#iconsDiv i {
+	    font-size: 24px;
+	}
 }
 
 
