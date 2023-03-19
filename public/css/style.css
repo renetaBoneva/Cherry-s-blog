@@ -732,6 +732,7 @@ footer .wrapper i {
 	#nameDiv h2 {
 	    font-size: 64px;
     	line-height: 72px;
+	    text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
 	}
 
 	#iconsDiv i {
@@ -746,10 +747,6 @@ footer .wrapper i {
 	#detailsSection h3 {
 	    font-size: 40px;
     	line-height: 64px;
-	}
-
-	#nameDiv h2 {
-	    text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
 	}
 
 	.comment {
@@ -801,6 +798,49 @@ footer .wrapper i {
 	    padding: 24px;
 	}
 
+	h1 {
+    	text-align: center;
+	}
+
+	form {
+    	padding: 20px 12px;
+	}
+
+	form h2 {
+		margin-bottom: 12px;
+	}
+
+	form label {
+    	padding-left: 16px;
+	    margin-top: 0px;
+	    font-size: 16px;
+	}
+
+	form input[type="text"], form input[type="password"] {
+	    font-size: 18px;
+	    height: 40px;
+    	padding: 8px 12px;
+	}
+
+	form textarea[name="ingredients"], form textarea[name="method"] {
+	    font-size: 18px;
+    	padding: 8px 12px;
+	}
+
+	form input[type="submit"] {
+	    margin-bottom: 0px;
+	    margin-top: 20px;
+    	font-size: 22px;
+    	line-height: 28px;
+	}
+
+	/*-------------------
+		Navigation
+	-------------------*/
+	header {
+	    margin-top: 24px;
+	}
+
 	nav.wrapper {
     	margin: 0% 2%;
 	}
@@ -809,6 +849,14 @@ footer .wrapper i {
 	    margin-top: 72px;
 	}
 
+	nav ul li a {
+	    font-size: 20px;
+	    line-height: 36px;
+	}
+
+	/*-------------------
+		Home section
+	-------------------*/
 	#homeSection .wrapper {
 	    flex-direction: column;
 	    align-content: center;
@@ -831,9 +879,105 @@ footer .wrapper i {
 	#homeSection #first {
 	    align-content: center;
 	}
+
+	#homeSection #second {
+		margin-top: 20px;
+	    width: 100%;
+	}
+
+	#homeSection #second img, #recipeHeader img {
+	    filter: drop-shadow( -10px 10px 0px rgba(231, 141, 189, 1));
+	}
+
+	/*--------------
+		Catalog
+	---------------*/
+	h2 {
+   		font-size: 52px;
+	}
+
+	#recipesWrapper {
+	    flex-direction: column;
+	    justify-content: center;
+	    align-content: center;
+	}
+
+	.recipe {
+	    width: 100%;
+	    margin-bottom: 16px;
+	}
+
+	/*------------------
+	   Profile section
+	------------------*/
+	#myProfileSection.wrapper {
+	    padding: 16px 2%;
+	}
+
+	#profileDiv {
+	    padding: 20px;
+	}
+
+	#profileDiv #profileImg {
+	    width: 200px;
+	    height: 200px;
+	}
+
+	.infoDiv p:first-child {
+	    margin-left: 0%;
+	}
+
+	.infoDiv p:last-child {
+	    font-size: 20px;
+	}
+
+	#editIcons {
+	    font-size: 20px;
+	}
+
+	.recipe {
+	    height: 302px;
+	}
+
+	/*--------------
+		Details page
+	--------------*/
+	#recipeHeader {
+ 	    flex-direction: column-reverse;
+	}
+
+	#nameDiv {
+	    flex-direction: column;
+	    width: 100%;
+	}
+
+	#imgDiv {
+    	margin-top: 24px;
+	    width: 100%;
+	}
+
+	#nameDiv h2 {
+		text-align: center;
+	    font-size: 54px;
+	    line-height: 60px;
+	}
+
+	/*--------------
+		 Footer
+	--------------*/
+	footer .wrapper {
+	    padding: 16px;
+	}
+
+	footer .wrapper i {
+	    font-size: 36px;
+    	padding: 5px;
+	}
 }
 
 
 @media (max-width: 425px) {
-	
+	.recipe {
+	    height: 248px;
+	}
 }
