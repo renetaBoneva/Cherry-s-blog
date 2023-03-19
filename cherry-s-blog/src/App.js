@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { CatalogFunction } from "./components/CatalogSection";
+import { Footer } from "./components/Footer";
+import { Navigation } from "./components/Navigation";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>	
+      <Navigation />
+      <main>
+        <section id="homeSection">
+
+          <div className="wrapper">
+            <div id="first">
+              <h1>Cherry's blog</h1>
+              <div id="br"></div>
+              <button><a href="./details.html">THE BEST CHERRY CAKE</a></button>
+            </div>
+            <div id="second">
+              <img src="img/homeImg.jpg" alt="cherryCake"/>
+            </div>
+
+          </div>
+        </section>
+
+        <CatalogFunction />
+      </main>
+      <Footer />
+    </>
   );
 }
 
