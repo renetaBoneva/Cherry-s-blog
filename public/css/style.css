@@ -51,6 +51,13 @@ h2 {
 /*---------------
 	Navigation
 ---------------*/
+header {	
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
 nav {
 	width: 100%;
 	background: #FFFFFF;
@@ -401,8 +408,8 @@ footer .wrapper i {
 	}
 
 	nav.wrapper {
+		margin: 0px;
 	    width: 92%;
-	    margin: 0px 40px;
 	}
 
 	/*-------------------
@@ -617,6 +624,7 @@ footer .wrapper i {
 	}
 
 	h2 {
+		text-align: center;
 	    font-size: 64px;
 	    line-height: 36px;
 	    text-shadow: -6px 4px 4px rgba(183, 211, 182, 1);
@@ -645,11 +653,13 @@ footer .wrapper i {
     	padding: 4px 16px;
 	}
 
-	#deleteRecipeSection form h2 {
+	#deleteRecipeSection form h2 {    
+		text-align: center;
 	    text-shadow: -6px 4px 4px rgba(183, 211, 182, 1);
 	}
 
-	#editRecipeSection form h2 {
+	#editRecipeSection form h2 {    
+		text-align: center;
 	    text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
 	}
 
@@ -910,10 +920,6 @@ footer .wrapper i {
 	/*------------------
 	   Profile section
 	------------------*/
-	#myProfileSection.wrapper {
-	    padding: 16px 2%;
-	}
-
 	#profileDiv {
 	    padding: 20px;
 	}
@@ -944,6 +950,7 @@ footer .wrapper i {
 	--------------*/
 	#recipeHeader {
  	    flex-direction: column-reverse;
+ 	    padding-left: 0px;
 	}
 
 	#nameDiv {
@@ -962,6 +969,28 @@ footer .wrapper i {
 	    line-height: 60px;
 	}
 
+	#ingredientsDiv, #methodsDiv, #comments {
+		padding: 16px;
+	}
+
+	#detailsSection h3 {
+	    font-size: 32px;
+    	line-height: 44px;
+    	padding-bottom: 8px;
+	}
+
+	#description p,comments {
+    	padding-bottom: 8px;
+    	font-size: 20px;
+	    line-height: 30px;
+	}
+
+	#comments form textarea {
+		font-size: 20px;
+		width: 100%;
+		padding: 8px 12px;
+	}
+
 	/*--------------
 		 Footer
 	--------------*/
@@ -977,7 +1006,31 @@ footer .wrapper i {
 
 
 @media (max-width: 425px) {
+
+	#detailsSection .wrapper, #myProfileSection.wrapper{
+	    padding: 16px;
+	}
 	.recipe {
 	    height: 248px;
+	}
+
+	.comment {
+	    flex-direction: column;
+	}
+
+	.comPlace {
+	    width: 100%;
+	}
+
+	.comPlace .content {
+	    font-size: 20px;	    
+    	line-height: 32px;
+	}
+	#comments form {
+    	flex-direction: column;
+	}
+
+	#comments form button {
+	    margin-top: 8px;
 	}
 }
