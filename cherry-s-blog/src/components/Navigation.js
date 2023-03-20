@@ -1,24 +1,26 @@
+import { Link } from "react-router-dom";
+
+
 export function Navigation() {
     return (
-
         <header>
             <nav className="wrapper">
                 <div>
-                    <a href="./index.html">
-                        <img src="./img/logo1.png" alt="logo" />
-                    </a>
+                    <Link to="/">
+                        <img src="/img/logo1.png" alt="logo" />
+                    </Link>
                 </div>
 
                 <div>
                     <ul id="navUL">
-                        <li><a href="./index.html">Catalog</a></li>
+                        <li><Link to="/catalog">Catalog</Link></li>
                         {/* <!-- Guest menu --> */}
-                        <li><a href="./login.html">Login</a></li>
-                        <li><a href="./register.html">Register</a></li>
+                        <li><Link to="/login">Login</Link></li>
+                        <li><Link to="/register">Register</Link></li>
                         {/* <!-- Logged in user menu --> */}
-                        <li><a href="./addRecipe.html">Add recipe</a></li>
-                        <li><a href="./profile.html">My profile</a></li>
-                        <li><a href="/logout">Logout</a></li>
+                        <li><Link to="/addRecipe">Add recipe</Link></li>
+                        <li><Link to="/profile">My profile</Link></li>
+                        <li><Link to="/logout">Logout</Link></li>
                     </ul>
                 </div>
             </nav>

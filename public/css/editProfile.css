@@ -1,0 +1,25 @@
+/*------------------
+   Edit profile page
+------------------*/
+#editSection form input[type="text"], #editSection form input[type="password"]{
+	color: #15491B;
+}
+
+#editSection form {
+	background: #E78DBD;
+}
+
+#editSection form h2 {
+	color: #EFF171;
+    text-align: center;
+}
+
+#editSection form input[type="submit"] {
+	background: #B7D3B6;
+	color: #15491B;
+} 
+
+#editSection form input[type="submit"]:hover {
+	background: #15491B;
+	color: #B7D3B6;
+}

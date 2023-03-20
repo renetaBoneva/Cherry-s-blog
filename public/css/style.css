@@ -1,0 +1,1036 @@
+/*font-family: 'Cormorant Infant', serif;
+font-family: 'Philosopher', sans-serif;*/
+
+/*---------------
+	General
+---------------*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+main {
+	width: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	overflow-x: hidden;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.wrapper{
+	width: 1896px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    padding: 88px 158px 88px 158px;
+}
+
+
+h2 {
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 112px;
+	line-height: 125px;
+	text-shadow: -12px 4px 4px rgba(183, 211, 182, 1);
+}
+
+/*---------------
+	Navigation
+---------------*/
+header {	
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+nav {
+	width: 100%;
+	background: #FFFFFF;
+	border-radius: 50px;
+	margin-top: 72px;
+	display: flex;	
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+	display: flex;	
+	flex-wrap: wrap;
+	align-content: center;
+    justify-content: flex-start;
+    padding-right: 36px;
+}
+
+nav ul li {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+    align-content: center;
+}
+
+nav ul li a {
+	text-decoration: none;
+	text-align: center;
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 49px;
+	color: #E78DBD;
+	display: flex;
+	align-content: center;	
+    margin: 0px 16px 0px 16px;
+}
+
+nav img {
+	height: 100px;
+	margin: 10px 0px 10px 32px;
+}
+
+nav.wrapper {
+	width: 1580px;	
+	padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*---------------
+	Home page
+---------------*/
+h1 {
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 124px;
+	line-height: 139px;
+	color: #EFF171;
+	text-shadow: -12px 4px 4px rgba(231, 141, 189, 1);
+}
+
+#homeSection .wrapper {
+	display: flex;
+	flex-direction: row; 
+  	flex-wrap: wrap;
+	justify-content: space-between;	
+  	align-content: space-between;
+    align-items: flex-start;
+}
+
+#homeSection #first {
+	width: 30%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+#homeSection #first #br {	
+    margin-top: 55%;
+	width: 100%;
+	height: 4px;
+	background: #15491B;
+}
+
+#homeSection #first button {
+	margin-top: 30px;    
+    background: #E78DBD;
+    border-radius: 50px;
+    padding: 17px;
+    border: none;
+    width: 100%;
+}
+
+#homeSection #first button a {
+	text-decoration: none;
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    color: #EFF171;
+}
+
+#homeSection #first button:hover {
+	background-color: #15491B;
+}
+
+#homeSection #second {
+	width: 60%;
+}
+
+#homeSection #second img {
+	width: 100%;
+	border-radius: 50px;
+	filter: drop-shadow( -20px 20px 0px rgba(231, 141, 189, 1));
+}
+
+form label {
+	width: 100%;
+    margin-top: 36px;
+    padding-left: 24px;
+
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 40px;
+	color: #15491B;
+}
+
+form input[type="text"], form input[type="password"] {
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 40px;
+
+	width: 100%;
+	padding: 8px 24px;
+	height: 64px;
+	background: #FFFFFF;
+	border-radius: 50px;
+	border: none;
+}
+
+form textarea {
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 40px;
+
+	width: 100%;
+	padding: 8px 24px;
+	height: 64px;
+	background: #FFFFFF;
+	border-radius: 50px;
+	border: none;
+}
+
+form input[type="submit"] {
+	width: 40%;
+	min-width: 190px;
+	border-radius: 50px;
+    margin-bottom: 16px;
+    margin-top: 36px;
+    border: none;
+    padding: 12px 16px;
+
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 49px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 48%;
+	padding: 20px 32px;
+	border-radius: 50px;
+}
+
+/*---------------
+	Catalog
+---------------*/
+#catalogSection {
+	background: #EFF171;
+}
+
+h2 {
+	color: #E78DBD;
+}
+
+#catalogSection .wrapper{
+	padding-bottom: 0px;
+}
+
+#recipesWrapper {
+	margin-top: 88px;
+	display: flex;
+  	flex-wrap: wrap;
+	justify-content: space-between;	
+  	align-content: space-between;
+	width: 100%;
+}
+
+.recipesRow {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	padding-bottom: 72px;
+}
+
+.recipe {
+	background: #B7D3B6;
+	border-radius: 50px;
+	justify-content: center;
+	width: 30%;
+	min-height: 600px;
+    margin-bottom: 72px;
+}
+
+.recipe img {
+	height: 470px;
+	width: 100%;
+	border-radius: 50px;
+  	object-fit: cover;
+}
+
+.recipe h3 {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.recipe h3 a {
+	text-decoration: none;
+	height: 132px;
+	width: 100%;
+
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 49px;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	text-align: center;
+	color: #15491B;
+}
+
+.recipe h3 a:hover {
+	font-size: 52px;
+}
+
+
+
+/*---------------
+	Footer
+---------------*/
+footer {
+	width: 100%;
+	background-color: #15491B;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+footer .wrapper {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+    padding: 48px 158px 48px 158px;
+}
+
+footer .wrapper p {
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 49px;
+	text-align: center;
+	color: #EFF171;
+
+	margin-bottom: 24px;
+}
+
+footer .wrapper i {
+	font-size: 68px;
+	color: #EFF171;
+	padding: 10px;
+}
+
+
+/*@media (max-width: 1700px) {
+
+}
+
+@media (max-width: 1272px) {
+
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 600px) {
+
+}
+*/
+@media (max-width: 1896px) {	
+	.wrapper {
+		width: 100%;
+	    padding: 40px 48px;
+	}
+
+	h2 {
+		font-size: 80px;
+		line-height: 100px
+	}
+
+	/*-------------------
+		  Navigation 
+	-------------------*/
+	header {
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	nav img {
+    	height: 60px;
+	}
+
+	nav.wrapper {
+		margin: 0px;
+	    width: 92%;
+	}
+
+	/*-------------------
+		Catalog page 
+	-------------------*/
+	#recipesWrapper {
+    	margin-top: 40px;
+	}
+}
+
+@media (max-width: 1440px) {
+	
+	h1 {
+	    font-size: 100px;
+	    line-height: 90px;
+	}
+
+	form label {
+		font-size: 28px;
+	}
+
+	form input[type="submit"] {
+	    font-size: 36px;
+	    line-height: 36px;
+	}
+
+	/*-------------------
+		Navigation 
+	-------------------*/
+	nav ul li a {
+	    font-size: 28px;
+	    margin: 0px 12px 0px 12px;
+	}
+
+	/*-------------------
+		Catalog page 
+	-------------------*/
+	#homeSection #first #br {
+	    margin-top: 30%;
+	}
+
+	#homeSection #first button a {
+		font-size: 24px;
+	}
+
+	.recipe {
+	    width: 32%;
+	    height: 400px;
+    	min-height: fit-content;
+	    margin-bottom: 40px;
+	}
+		
+	.recipe img {
+	    height: 72%;
+	}
+
+	.recipe h3 a {
+	    height: 80px;
+	    font-size: 34px;
+	    line-height: 40px;
+	}
+
+	.recipe h3 a:hover {
+	    font-size: 38px;
+	}
+
+
+
+	/*-------------------
+		Details page 
+	-------------------*/
+	#nameDiv h2 {
+	    font-size: 80px;
+	}
+
+	#description p {
+	    font-size: 28px;
+	    line-height: 40px;
+	}
+
+	#detailsSection h3 {
+	    font-size: 48px;
+	}
+
+	#detailsSection h3 {
+		padding-bottom: 0px;
+	}
+
+
+	#comments h3 {
+		padding-bottom: 16px;
+	}
+
+	.comPlace {
+	    width: 74%;
+	}
+
+	.comPlace .content {
+	    font-size: 28px;
+	}
+	.comPlace .name {
+	    font-size: 32px;
+	}
+
+	/*-------------------
+		Profile page 
+	-------------------*/
+	.infoDiv p:first-child {
+    	margin-left: 5%;
+	    width: auto;
+	    font-size: 32px;
+    	padding-right: 24px;
+	}
+
+	.infoDiv p:last-child {
+	    font-size: 36px;
+	}
+
+	#profileDiv #profileInfo {
+	    width: 60%;
+	}
+
+	/*-------------------
+		   Footer 
+	-------------------*/
+	footer .wrapper {
+	    padding: 24px 158px;
+	}
+
+	footer .wrapper p {
+		font-size: 24px;
+		margin-bottom: 0px;
+	}
+
+	footer .wrapper i {
+    	font-size: 40px;
+	}
+
+}
+
+@media (max-width: 1250px) {
+	h1 {
+	    font-size: 84px;
+	}
+
+	form {
+	    width: 68%;
+	}
+
+	#homeSection #first button a {
+		font-size: 20px;
+	}
+
+	#profileDiv {
+	    padding: 48px 40px;
+	}
+
+	#profileDiv #profileInfo {
+	    width: 60%;
+	}
+
+	.infoDiv p:first-child {
+	    font-size: 24px;
+	}
+
+	.infoDiv p:last-child {
+	    font-size: 28px;
+	}
+
+	#editIcons {
+	    font-size: 26px;
+	}
+
+	.recipe h3 a {
+    	font-size: 28px;
+    }
+}
+
+@media (max-width: 1000px) {
+	nav.wrapper {
+	    flex-direction: column;
+	}
+
+	nav img {
+	    margin: 10px 0px;
+	}
+
+	nav ul {
+		display: none;
+	    padding-right: 0px;
+    	flex-direction: column;
+	}
+
+	nav:hover #navUL {
+		display: block;
+	}
+
+	nav ul li a {
+	    font-size: 24px;
+	    margin: 0px 8px ;
+	}
+
+	nav img {
+	    height: 44px;
+	}
+
+
+	h1 {
+	    font-size: 54px;
+    	line-height: 60px;    
+    	text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
+	}
+
+	h2 {
+		text-align: center;
+	    font-size: 64px;
+	    line-height: 36px;
+	    text-shadow: -6px 4px 4px rgba(183, 211, 182, 1);
+	}
+
+	form {
+	    width: 100%;
+	}
+
+	form label {
+	    margin-top: 12px;	    
+   		font-size: 20px;
+	}
+
+	form input[type="text"], form input[type="password"] {
+	    font-size: 22px;
+	    height: 44px;
+	}
+
+	form textarea {
+	    font-size: 22px;
+	}
+
+	form input[type="submit"] {
+	    font-size: 28px;	    
+    	padding: 4px 16px;
+	}
+
+	#deleteRecipeSection form h2 {    
+		text-align: center;
+	    text-shadow: -6px 4px 4px rgba(183, 211, 182, 1);
+	}
+
+	#editRecipeSection form h2 {    
+		text-align: center;
+	    text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
+	}
+
+	/*-------------------
+		  Home page 
+	-------------------*/
+	#homeSection #first button a {
+		font-size: 12px;
+		line-height: 12px;
+    }
+
+	#homeSection #first button {
+		padding: 8px;
+		margin-top: 24px;
+	}
+
+	#homeSection #first #br {
+	    height: 2px;
+	}
+
+	/*-------------------
+		  Catalog page 
+	-------------------*/
+	.recipe img {
+	    height: 68%;
+	}
+	.recipe {
+	    height: 240px;
+	}
+
+	.recipe h3 a {
+	    height: 64px;
+	    font-size: 22px;
+	    line-height: 26px;
+	}
+
+	.recipe h3 a:hover {		
+	    font-size: 24px;
+	}
+
+	#addRecipeSection .wrapper {
+	    padding: 30px 48px;
+	}
+
+	/*-------------------
+		Profile page 
+	-------------------*/
+	#myProfileSection.wrapper {
+	    padding: 40px 48px 0px 48px;
+	}
+
+	#profileDiv #profileInfo {
+	    width: 100%;
+    	margin-top: 20px;
+	}
+
+	#profileDiv {
+		padding: 20px 32px;
+    	align-items: center;
+    	flex-direction: column;
+	}
+
+	.infoDiv p:first-child {
+	    font-size: 20px;
+    	padding-right: 3%;
+	}
+
+	.infoDiv p:last-child {
+	    font-size: 24px;
+	}
+
+	#editIcons {
+	    margin-top: 8px;
+	    font-size: 24px;
+	}
+
+	/*-------------------
+		Details page 
+	-------------------*/
+	#nameDiv h2 {
+	    font-size: 64px;
+    	line-height: 72px;
+	    text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
+	}
+
+	#iconsDiv i {
+	    font-size: 24px;
+	}
+
+	#description p {
+	    font-size: 20px;
+	    line-height: 36px;
+	}
+
+	#detailsSection h3 {
+	    font-size: 40px;
+    	line-height: 64px;
+	}
+
+	.comment {
+		padding: 16px;
+	}
+
+	.imgPlace {
+	    height: 100px;
+	    width: 100px;
+	    font-size: 60px;
+	}
+
+	.comPlace .name {
+	    font-size: 24px;
+	}
+
+	.comPlace .content {
+	    font-size: 22px;
+	}
+
+	#comments {
+		padding: 24px;
+	}
+
+	#comments form textarea {
+	    font-size: 22px;
+	}
+
+	#newCommentForm {
+		padding: 0px;
+		padding-left: 12px;
+	}
+
+	#comments form button {
+	    font-size: 32px;
+	}
+
+	/*--------------
+		 Footer
+	--------------*/
+	footer .wrapper p {
+    font-size: 20px;
+}
+
+
+@media (max-width: 680px) {
+	.wrapper {
+	    width: 100%;
+	    padding: 24px;
+	}
+
+	h1 {
+    	text-align: center;
+	}
+
+	form {
+    	padding: 20px 12px;
+	}
+
+	form h2 {
+		margin-bottom: 12px;
+	}
+
+	form label {
+    	padding-left: 16px;
+	    margin-top: 0px;
+	    font-size: 16px;
+	}
+
+	form input[type="text"], form input[type="password"] {
+	    font-size: 18px;
+	    height: 40px;
+    	padding: 8px 12px;
+	}
+
+	form textarea[name="ingredients"], form textarea[name="method"] {
+	    font-size: 18px;
+    	padding: 8px 12px;
+	}
+
+	form input[type="submit"] {
+	    margin-bottom: 0px;
+	    margin-top: 20px;
+    	font-size: 22px;
+    	line-height: 28px;
+	}
+
+	/*-------------------
+		Navigation
+	-------------------*/
+	header {
+	    margin-top: 24px;
+	}
+
+	nav.wrapper {
+    	margin: 0% 2%;
+	}
+
+	nav {
+	    margin-top: 72px;
+	}
+
+	nav ul li a {
+	    font-size: 20px;
+	    line-height: 36px;
+	}
+
+	/*-------------------
+		Home section
+	-------------------*/
+	#homeSection .wrapper {
+	    flex-direction: column;
+	    align-content: center;
+	}
+
+	#homeSection #first {
+	    width: 100%;
+	    height: auto; 
+	    justify-content: center;
+	}
+
+	#homeSection #first #br {
+	    display: none;
+	}
+
+	#homeSection #first button {
+		display: none;
+	}
+
+	#homeSection #first {
+	    align-content: center;
+	}
+
+	#homeSection #second {
+		margin-top: 20px;
+	    width: 100%;
+	}
+
+	#homeSection #second img, #recipeHeader img {
+	    filter: drop-shadow( -10px 10px 0px rgba(231, 141, 189, 1));
+	}
+
+	/*--------------
+		Catalog
+	---------------*/
+	h2 {
+   		font-size: 52px;
+	}
+
+	#recipesWrapper {
+	    flex-direction: column;
+	    justify-content: center;
+	    align-content: center;
+	}
+
+	.recipe {
+	    width: 100%;
+	    margin-bottom: 16px;
+	}
+
+	/*------------------
+	   Profile section
+	------------------*/
+	#profileDiv {
+	    padding: 20px;
+	}
+
+	#profileDiv #profileImg {
+	    width: 200px;
+	    height: 200px;
+	}
+
+	.infoDiv p:first-child {
+	    margin-left: 0%;
+	}
+
+	.infoDiv p:last-child {
+	    font-size: 20px;
+	}
+
+	#editIcons {
+	    font-size: 20px;
+	}
+
+	.recipe {
+	    height: 302px;
+	}
+
+	/*--------------
+		Details page
+	--------------*/
+	#recipeHeader {
+ 	    flex-direction: column-reverse;
+ 	    padding-left: 0px;
+	}
+
+	#nameDiv {
+	    flex-direction: column;
+	    width: 100%;
+	}
+
+	#imgDiv {
+    	margin-top: 24px;
+	    width: 100%;
+	}
+
+	#nameDiv h2 {
+		text-align: center;
+	    font-size: 54px;
+	    line-height: 60px;
+	}
+
+	#ingredientsDiv, #methodsDiv, #comments {
+		padding: 16px;
+	}
+
+	#detailsSection h3 {
+	    font-size: 32px;
+    	line-height: 44px;
+    	padding-bottom: 8px;
+	}
+
+	#description p,comments {
+    	padding-bottom: 8px;
+    	font-size: 20px;
+	    line-height: 30px;
+	}
+
+	#comments form textarea {
+		font-size: 20px;
+		width: 100%;
+		padding: 8px 12px;
+	}
+
+	/*--------------
+		 Footer
+	--------------*/
+	footer .wrapper {
+	    padding: 16px;
+	}
+
+	footer .wrapper i {
+	    font-size: 36px;
+    	padding: 5px;
+	}
+}
+
+
+@media (max-width: 425px) {
+
+	#detailsSection .wrapper, #myProfileSection.wrapper{
+	    padding: 16px;
+	}
+	.recipe {
+	    height: 248px;
+	}
+
+	.comment {
+	    flex-direction: column;
+	}
+
+	.comPlace {
+	    width: 100%;
+	}
+
+	.comPlace .content {
+	    font-size: 20px;	    
+    	line-height: 32px;
+	}
+	#comments form {
+    	flex-direction: column;
+	}
+
+	#comments form button {
+	    margin-top: 8px;
+	}
+}

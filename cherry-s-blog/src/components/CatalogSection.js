@@ -1,4 +1,4 @@
-export function CatalogFunction(){
+export function CatalogSection(){
     return (
         <section id="catalogSection">
 

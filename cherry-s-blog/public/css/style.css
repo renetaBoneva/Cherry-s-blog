@@ -9,7 +9,9 @@ font-family: 'Philosopher', sans-serif;*/
 	padding: 0;
 	box-sizing: border-box;
 }
-main {
+
+main,
+#root {
 	width: 100%;
 }
 
@@ -29,13 +31,13 @@ section {
 	width: 100%;
 }
 
-.wrapper{
+.wrapper {
 	width: 1896px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-    padding: 88px 158px 88px 158px;
+	padding: 88px 158px 88px 158px;
 }
 
 
@@ -51,11 +53,11 @@ h2 {
 /*---------------
 	Navigation
 ---------------*/
-header {	
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+header {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
 }
 
 nav {
@@ -63,17 +65,17 @@ nav {
 	background: #FFFFFF;
 	border-radius: 50px;
 	margin-top: 72px;
-	display: flex;	
-    align-items: center;
-    justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 nav ul {
-	display: flex;	
+	display: flex;
 	flex-wrap: wrap;
 	align-content: center;
-    justify-content: flex-start;
-    padding-right: 36px;
+	justify-content: flex-start;
+	padding-right: 36px;
 }
 
 nav ul li {
@@ -81,7 +83,7 @@ nav ul li {
 	flex-wrap: wrap;
 	list-style: none;
 	justify-content: center;
-    align-content: center;
+	align-content: center;
 }
 
 nav ul li a {
@@ -94,8 +96,8 @@ nav ul li a {
 	line-height: 49px;
 	color: #E78DBD;
 	display: flex;
-	align-content: center;	
-    margin: 0px 16px 0px 16px;
+	align-content: center;
+	margin: 0px 16px 0px 16px;
 }
 
 nav img {
@@ -104,10 +106,10 @@ nav img {
 }
 
 nav.wrapper {
-	width: 1580px;	
+	width: 1580px;
 	padding: 0;
-    flex-direction: row;
-    justify-content: space-between;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 /*---------------
@@ -125,47 +127,47 @@ h1 {
 
 #homeSection .wrapper {
 	display: flex;
-	flex-direction: row; 
-  	flex-wrap: wrap;
-	justify-content: space-between;	
-  	align-content: space-between;
-    align-items: flex-start;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	align-items: flex-start;
 }
 
 #homeSection #first {
 	width: 30%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-between;
-    justify-content: space-between;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: space-between;
+	justify-content: space-between;
 }
 
-#homeSection #first #br {	
-    margin-top: 55%;
+#homeSection #first #br {
+	margin-top: 55%;
 	width: 100%;
 	height: 4px;
 	background: #15491B;
 }
 
 #homeSection #first button {
-	margin-top: 30px;    
-    background: #E78DBD;
-    border-radius: 50px;
-    padding: 17px;
-    border: none;
-    width: 100%;
+	margin-top: 30px;
+	background: #E78DBD;
+	border-radius: 50px;
+	padding: 17px;
+	border: none;
+	width: 100%;
 }
 
 #homeSection #first button a {
 	text-decoration: none;
-    font-family: 'Philosopher';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 40px;
-    color: #EFF171;
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 40px;
+	color: #EFF171;
 }
 
 #homeSection #first button:hover {
@@ -179,13 +181,13 @@ h1 {
 #homeSection #second img {
 	width: 100%;
 	border-radius: 50px;
-	filter: drop-shadow( -20px 20px 0px rgba(231, 141, 189, 1));
+	filter: drop-shadow(-20px 20px 0px rgba(231, 141, 189, 1));
 }
 
 form label {
 	width: 100%;
-    margin-top: 36px;
-    padding-left: 24px;
+	margin-top: 36px;
+	padding-left: 24px;
 
 	font-family: 'Philosopher';
 	font-style: normal;
@@ -195,7 +197,8 @@ form label {
 	color: #15491B;
 }
 
-form input[type="text"], form input[type="password"] {
+form input[type="text"],
+form input[type="password"] {
 	font-family: 'Philosopher';
 	font-style: normal;
 	font-weight: 400;
@@ -229,10 +232,10 @@ form input[type="submit"] {
 	width: 40%;
 	min-width: 190px;
 	border-radius: 50px;
-    margin-bottom: 16px;
-    margin-top: 36px;
-    border: none;
-    padding: 12px 16px;
+	margin-bottom: 16px;
+	margin-top: 36px;
+	border: none;
+	padding: 12px 16px;
 
 	font-family: 'Philosopher';
 	font-style: normal;
@@ -265,16 +268,16 @@ h2 {
 	color: #E78DBD;
 }
 
-#catalogSection .wrapper{
+#catalogSection .wrapper {
 	padding-bottom: 0px;
 }
 
 #recipesWrapper {
 	margin-top: 88px;
 	display: flex;
-  	flex-wrap: wrap;
-	justify-content: space-between;	
-  	align-content: space-between;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
 	width: 100%;
 }
 
@@ -291,14 +294,14 @@ h2 {
 	justify-content: center;
 	width: 30%;
 	min-height: 600px;
-    margin-bottom: 72px;
+	margin-bottom: 72px;
 }
 
 .recipe img {
 	height: 470px;
 	width: 100%;
 	border-radius: 50px;
-  	object-fit: cover;
+	object-fit: cover;
 }
 
 .recipe h3 {
@@ -320,7 +323,7 @@ h2 {
 	line-height: 49px;
 	display: flex;
 	align-items: center;
-    justify-content: center;
+	justify-content: center;
 	text-align: center;
 	color: #15491B;
 }
@@ -347,7 +350,7 @@ footer .wrapper {
 	flex-direction: column;
 	align-content: center;
 	justify-content: center;
-    padding: 48px 158px 48px 158px;
+	padding: 48px 158px 48px 158px;
 }
 
 footer .wrapper p {
@@ -384,10 +387,10 @@ footer .wrapper i {
 
 }
 */
-@media (max-width: 1896px) {	
+@media (max-width: 1896px) {
 	.wrapper {
 		width: 100%;
-	    padding: 40px 48px;
+		padding: 40px 48px;
 	}
 
 	h2 {
@@ -404,27 +407,27 @@ footer .wrapper i {
 	}
 
 	nav img {
-    	height: 60px;
+		height: 60px;
 	}
 
 	nav.wrapper {
 		margin: 0px;
-	    width: 92%;
+		width: 92%;
 	}
 
 	/*-------------------
 		Catalog page 
 	-------------------*/
 	#recipesWrapper {
-    	margin-top: 40px;
+		margin-top: 40px;
 	}
 }
 
 @media (max-width: 1440px) {
-	
+
 	h1 {
-	    font-size: 100px;
-	    line-height: 90px;
+		font-size: 100px;
+		line-height: 90px;
 	}
 
 	form label {
@@ -432,23 +435,23 @@ footer .wrapper i {
 	}
 
 	form input[type="submit"] {
-	    font-size: 36px;
-	    line-height: 36px;
+		font-size: 36px;
+		line-height: 36px;
 	}
 
 	/*-------------------
 		Navigation 
 	-------------------*/
 	nav ul li a {
-	    font-size: 28px;
-	    margin: 0px 12px 0px 12px;
+		font-size: 28px;
+		margin: 0px 12px 0px 12px;
 	}
 
 	/*-------------------
 		Catalog page 
 	-------------------*/
 	#homeSection #first #br {
-	    margin-top: 30%;
+		margin-top: 30%;
 	}
 
 	#homeSection #first button a {
@@ -456,24 +459,24 @@ footer .wrapper i {
 	}
 
 	.recipe {
-	    width: 32%;
-	    height: 400px;
-    	min-height: fit-content;
-	    margin-bottom: 40px;
+		width: 32%;
+		height: 400px;
+		min-height: fit-content;
+		margin-bottom: 40px;
 	}
-		
+
 	.recipe img {
-	    height: 72%;
+		height: 72%;
 	}
 
 	.recipe h3 a {
-	    height: 80px;
-	    font-size: 34px;
-	    line-height: 40px;
+		height: 80px;
+		font-size: 34px;
+		line-height: 40px;
 	}
 
 	.recipe h3 a:hover {
-	    font-size: 38px;
+		font-size: 38px;
 	}
 
 
@@ -482,16 +485,16 @@ footer .wrapper i {
 		Details page 
 	-------------------*/
 	#nameDiv h2 {
-	    font-size: 80px;
+		font-size: 80px;
 	}
 
 	#description p {
-	    font-size: 28px;
-	    line-height: 40px;
+		font-size: 28px;
+		line-height: 40px;
 	}
 
 	#detailsSection h3 {
-	    font-size: 48px;
+		font-size: 48px;
 	}
 
 	#detailsSection h3 {
@@ -504,39 +507,40 @@ footer .wrapper i {
 	}
 
 	.comPlace {
-	    width: 74%;
+		width: 74%;
 	}
 
 	.comPlace .content {
-	    font-size: 28px;
+		font-size: 28px;
 	}
+
 	.comPlace .name {
-	    font-size: 32px;
+		font-size: 32px;
 	}
 
 	/*-------------------
 		Profile page 
 	-------------------*/
 	.infoDiv p:first-child {
-    	margin-left: 5%;
-	    width: auto;
-	    font-size: 32px;
-    	padding-right: 24px;
+		margin-left: 5%;
+		width: auto;
+		font-size: 32px;
+		padding-right: 24px;
 	}
 
 	.infoDiv p:last-child {
-	    font-size: 36px;
+		font-size: 36px;
 	}
 
 	#profileDiv #profileInfo {
-	    width: 60%;
+		width: 60%;
 	}
 
 	/*-------------------
 		   Footer 
 	-------------------*/
 	footer .wrapper {
-	    padding: 24px 158px;
+		padding: 24px 158px;
 	}
 
 	footer .wrapper p {
@@ -545,18 +549,18 @@ footer .wrapper i {
 	}
 
 	footer .wrapper i {
-    	font-size: 40px;
+		font-size: 40px;
 	}
 
 }
 
 @media (max-width: 1250px) {
 	h1 {
-	    font-size: 84px;
+		font-size: 84px;
 	}
 
 	form {
-	    width: 68%;
+		width: 68%;
 	}
 
 	#homeSection #first button a {
@@ -564,43 +568,43 @@ footer .wrapper i {
 	}
 
 	#profileDiv {
-	    padding: 48px 40px;
+		padding: 48px 40px;
 	}
 
 	#profileDiv #profileInfo {
-	    width: 60%;
+		width: 60%;
 	}
 
 	.infoDiv p:first-child {
-	    font-size: 24px;
+		font-size: 24px;
 	}
 
 	.infoDiv p:last-child {
-	    font-size: 28px;
+		font-size: 28px;
 	}
 
 	#editIcons {
-	    font-size: 26px;
+		font-size: 26px;
 	}
 
 	.recipe h3 a {
-    	font-size: 28px;
-    }
+		font-size: 28px;
+	}
 }
 
 @media (max-width: 1000px) {
 	nav.wrapper {
-	    flex-direction: column;
+		flex-direction: column;
 	}
 
 	nav img {
-	    margin: 10px 0px;
+		margin: 10px 0px;
 	}
 
 	nav ul {
 		display: none;
-	    padding-right: 0px;
-    	flex-direction: column;
+		padding-right: 0px;
+		flex-direction: column;
 	}
 
 	nav:hover #navUL {
@@ -608,59 +612,60 @@ footer .wrapper i {
 	}
 
 	nav ul li a {
-	    font-size: 24px;
-	    margin: 0px 8px ;
+		font-size: 24px;
+		margin: 0px 8px;
 	}
 
 	nav img {
-	    height: 44px;
+		height: 44px;
 	}
 
 
 	h1 {
-	    font-size: 54px;
-    	line-height: 60px;    
-    	text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
+		font-size: 54px;
+		line-height: 60px;
+		text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
 	}
 
 	h2 {
 		text-align: center;
-	    font-size: 64px;
-	    line-height: 36px;
-	    text-shadow: -6px 4px 4px rgba(183, 211, 182, 1);
+		font-size: 64px;
+		line-height: 36px;
+		text-shadow: -6px 4px 4px rgba(183, 211, 182, 1);
 	}
 
 	form {
-	    width: 100%;
+		width: 100%;
 	}
 
 	form label {
-	    margin-top: 12px;	    
-   		font-size: 20px;
+		margin-top: 12px;
+		font-size: 20px;
 	}
 
-	form input[type="text"], form input[type="password"] {
-	    font-size: 22px;
-	    height: 44px;
+	form input[type="text"],
+	form input[type="password"] {
+		font-size: 22px;
+		height: 44px;
 	}
 
 	form textarea {
-	    font-size: 22px;
+		font-size: 22px;
 	}
 
 	form input[type="submit"] {
-	    font-size: 28px;	    
-    	padding: 4px 16px;
+		font-size: 28px;
+		padding: 4px 16px;
 	}
 
-	#deleteRecipeSection form h2 {    
+	#deleteRecipeSection form h2 {
 		text-align: center;
-	    text-shadow: -6px 4px 4px rgba(183, 211, 182, 1);
+		text-shadow: -6px 4px 4px rgba(183, 211, 182, 1);
 	}
 
-	#editRecipeSection form h2 {    
+	#editRecipeSection form h2 {
 		text-align: center;
-	    text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
+		text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
 	}
 
 	/*-------------------
@@ -669,7 +674,7 @@ footer .wrapper i {
 	#homeSection #first button a {
 		font-size: 12px;
 		line-height: 12px;
-    }
+	}
 
 	#homeSection #first button {
 		padding: 8px;
@@ -677,86 +682,87 @@ footer .wrapper i {
 	}
 
 	#homeSection #first #br {
-	    height: 2px;
+		height: 2px;
 	}
 
 	/*-------------------
 		  Catalog page 
 	-------------------*/
 	.recipe img {
-	    height: 68%;
+		height: 68%;
 	}
+
 	.recipe {
-	    height: 240px;
+		height: 240px;
 	}
 
 	.recipe h3 a {
-	    height: 64px;
-	    font-size: 22px;
-	    line-height: 26px;
+		height: 64px;
+		font-size: 22px;
+		line-height: 26px;
 	}
 
-	.recipe h3 a:hover {		
-	    font-size: 24px;
+	.recipe h3 a:hover {
+		font-size: 24px;
 	}
 
 	#addRecipeSection .wrapper {
-	    padding: 30px 48px;
+		padding: 30px 48px;
 	}
 
 	/*-------------------
 		Profile page 
 	-------------------*/
 	#myProfileSection.wrapper {
-	    padding: 40px 48px 0px 48px;
+		padding: 40px 48px 0px 48px;
 	}
 
 	#profileDiv #profileInfo {
-	    width: 100%;
-    	margin-top: 20px;
+		width: 100%;
+		margin-top: 20px;
 	}
 
 	#profileDiv {
 		padding: 20px 32px;
-    	align-items: center;
-    	flex-direction: column;
+		align-items: center;
+		flex-direction: column;
 	}
 
 	.infoDiv p:first-child {
-	    font-size: 20px;
-    	padding-right: 3%;
+		font-size: 20px;
+		padding-right: 3%;
 	}
 
 	.infoDiv p:last-child {
-	    font-size: 24px;
+		font-size: 24px;
 	}
 
 	#editIcons {
-	    margin-top: 8px;
-	    font-size: 24px;
+		margin-top: 8px;
+		font-size: 24px;
 	}
 
 	/*-------------------
 		Details page 
 	-------------------*/
 	#nameDiv h2 {
-	    font-size: 64px;
-    	line-height: 72px;
-	    text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
+		font-size: 64px;
+		line-height: 72px;
+		text-shadow: -6px 4px 4px rgba(231, 141, 189, 1);
 	}
 
 	#iconsDiv i {
-	    font-size: 24px;
+		font-size: 24px;
 	}
 
 	#description p {
-	    font-size: 20px;
-	    line-height: 36px;
+		font-size: 20px;
+		line-height: 36px;
 	}
 
 	#detailsSection h3 {
-	    font-size: 40px;
-    	line-height: 64px;
+		font-size: 40px;
+		line-height: 64px;
 	}
 
 	.comment {
@@ -764,17 +770,17 @@ footer .wrapper i {
 	}
 
 	.imgPlace {
-	    height: 100px;
-	    width: 100px;
-	    font-size: 60px;
+		height: 100px;
+		width: 100px;
+		font-size: 60px;
 	}
 
 	.comPlace .name {
-	    font-size: 24px;
+		font-size: 24px;
 	}
 
 	.comPlace .content {
-	    font-size: 22px;
+		font-size: 22px;
 	}
 
 	#comments {
@@ -782,7 +788,7 @@ footer .wrapper i {
 	}
 
 	#comments form textarea {
-	    font-size: 22px;
+		font-size: 22px;
 	}
 
 	#newCommentForm {
@@ -791,29 +797,29 @@ footer .wrapper i {
 	}
 
 	#comments form button {
-	    font-size: 32px;
+		font-size: 32px;
 	}
 
 	/*--------------
 		 Footer
 	--------------*/
 	footer .wrapper p {
-    font-size: 20px;
+		font-size: 20px;
+	}
 }
-
 
 @media (max-width: 680px) {
 	.wrapper {
-	    width: 100%;
-	    padding: 24px;
+		width: 100%;
+		padding: 24px;
 	}
 
 	h1 {
-    	text-align: center;
+		text-align: center;
 	}
 
 	form {
-    	padding: 20px 12px;
+		padding: 20px 12px;
 	}
 
 	form h2 {
@@ -821,65 +827,67 @@ footer .wrapper i {
 	}
 
 	form label {
-    	padding-left: 16px;
-	    margin-top: 0px;
-	    font-size: 16px;
+		padding-left: 16px;
+		margin-top: 0px;
+		font-size: 16px;
 	}
 
-	form input[type="text"], form input[type="password"] {
-	    font-size: 18px;
-	    height: 40px;
-    	padding: 8px 12px;
+	form input[type="text"],
+	form input[type="password"] {
+		font-size: 18px;
+		height: 40px;
+		padding: 8px 12px;
 	}
 
-	form textarea[name="ingredients"], form textarea[name="method"] {
-	    font-size: 18px;
-    	padding: 8px 12px;
+	form textarea[name="ingredients"],
+	form textarea[name="method"] {
+		font-size: 18px;
+		padding: 8px 12px;
 	}
 
 	form input[type="submit"] {
-	    margin-bottom: 0px;
-	    margin-top: 20px;
-    	font-size: 22px;
-    	line-height: 28px;
+		margin-bottom: 0px;
+		margin-top: 20px;
+		font-size: 22px;
+		line-height: 28px;
 	}
 
 	/*-------------------
 		Navigation
 	-------------------*/
 	header {
-	    margin-top: 24px;
+		margin-top: 24px;
 	}
 
 	nav.wrapper {
-    	margin: 0% 2%;
+		margin: 0% 2%;
 	}
 
 	nav {
-	    margin-top: 72px;
+		margin-top: 72px;
 	}
 
 	nav ul li a {
-	    font-size: 20px;
-	    line-height: 36px;
+		font-size: 20px;
+		line-height: 36px;
 	}
 
 	/*-------------------
 		Home section
 	-------------------*/
 	#homeSection .wrapper {
-	    flex-direction: column;
-	    align-content: center;
+		flex-direction: column;
+		align-content: center;
 	}
 
 	#homeSection #first {
-	    width: 100%;
-	    height: auto; 
-	    justify-content: center;
+		width: 100%;
+		height: auto;
+		justify-content: center;
 	}
 
 	#homeSection #first #br {
-	    display: none;
+		display: none;
 	}
 
 	#homeSection #first button {
@@ -887,102 +895,106 @@ footer .wrapper i {
 	}
 
 	#homeSection #first {
-	    align-content: center;
+		align-content: center;
 	}
 
 	#homeSection #second {
 		margin-top: 20px;
-	    width: 100%;
+		width: 100%;
 	}
 
-	#homeSection #second img, #recipeHeader img {
-	    filter: drop-shadow( -10px 10px 0px rgba(231, 141, 189, 1));
+	#homeSection #second img,
+	#recipeHeader img {
+		filter: drop-shadow(-10px 10px 0px rgba(231, 141, 189, 1));
 	}
 
 	/*--------------
 		Catalog
 	---------------*/
 	h2 {
-   		font-size: 52px;
+		font-size: 52px;
 	}
 
 	#recipesWrapper {
-	    flex-direction: column;
-	    justify-content: center;
-	    align-content: center;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
 	}
 
 	.recipe {
-	    width: 100%;
-	    margin-bottom: 16px;
+		width: 100%;
+		margin-bottom: 16px;
 	}
 
 	/*------------------
 	   Profile section
 	------------------*/
 	#profileDiv {
-	    padding: 20px;
+		padding: 20px;
 	}
 
 	#profileDiv #profileImg {
-	    width: 200px;
-	    height: 200px;
+		width: 200px;
+		height: 200px;
 	}
 
 	.infoDiv p:first-child {
-	    margin-left: 0%;
+		margin-left: 0%;
 	}
 
 	.infoDiv p:last-child {
-	    font-size: 20px;
+		font-size: 20px;
 	}
 
 	#editIcons {
-	    font-size: 20px;
+		font-size: 20px;
 	}
 
 	.recipe {
-	    height: 302px;
+		height: 302px;
 	}
 
 	/*--------------
 		Details page
 	--------------*/
 	#recipeHeader {
- 	    flex-direction: column-reverse;
- 	    padding-left: 0px;
+		flex-direction: column-reverse;
+		padding-left: 0px;
 	}
 
 	#nameDiv {
-	    flex-direction: column;
-	    width: 100%;
+		flex-direction: column;
+		width: 100%;
 	}
 
 	#imgDiv {
-    	margin-top: 24px;
-	    width: 100%;
+		margin-top: 24px;
+		width: 100%;
 	}
 
 	#nameDiv h2 {
 		text-align: center;
-	    font-size: 54px;
-	    line-height: 60px;
+		font-size: 54px;
+		line-height: 60px;
 	}
 
-	#ingredientsDiv, #methodsDiv, #comments {
+	#ingredientsDiv,
+	#methodsDiv,
+	#comments {
 		padding: 16px;
 	}
 
 	#detailsSection h3 {
-	    font-size: 32px;
-    	line-height: 44px;
-    	padding-bottom: 8px;
+		font-size: 32px;
+		line-height: 44px;
+		padding-bottom: 8px;
 	}
 
-	#description p,comments {
-    	padding-bottom: 8px;
-    	font-size: 20px;
-	    line-height: 30px;
+	#description p,
+	comments {
+		padding-bottom: 8px;
+		font-size: 20px;
+		line-height: 30px;
 	}
 
 	#comments form textarea {
@@ -995,42 +1007,45 @@ footer .wrapper i {
 		 Footer
 	--------------*/
 	footer .wrapper {
-	    padding: 16px;
+		padding: 16px;
 	}
 
 	footer .wrapper i {
-	    font-size: 36px;
-    	padding: 5px;
+		font-size: 36px;
+		padding: 5px;
 	}
 }
 
 
 @media (max-width: 425px) {
 
-	#detailsSection .wrapper, #myProfileSection.wrapper{
-	    padding: 16px;
+	#detailsSection .wrapper,
+	#myProfileSection.wrapper {
+		padding: 16px;
 	}
+
 	.recipe {
-	    height: 248px;
+		height: 248px;
 	}
 
 	.comment {
-	    flex-direction: column;
+		flex-direction: column;
 	}
 
 	.comPlace {
-	    width: 100%;
+		width: 100%;
 	}
 
 	.comPlace .content {
-	    font-size: 20px;	    
-    	line-height: 32px;
+		font-size: 20px;
+		line-height: 32px;
 	}
+
 	#comments form {
-    	flex-direction: column;
+		flex-direction: column;
 	}
 
 	#comments form button {
-	    margin-top: 8px;
+		margin-top: 8px;
 	}
 }

@@ -1,0 +1,30 @@
+/*------------------
+     Delete page
+------------------*/
+
+#deleteRecipeSection form {
+	background-color: #EFF171;
+}
+
+#deleteRecipeSection form input[type="text"], #deleteRecipeSection textarea{
+	color: #B7D3B6;
+}
+
+#deleteRecipeSection form h2 {
+	color: rgba(231, 141, 189, 1);
+	text-shadow: -12px 4px 4px rgba(183, 211, 182, 1);
+
+}
+
+#deleteRecipeSection form input[type="submit"] {
+	background: rgba(231, 141, 189, 1);
+	color: #EFF171;
+} 
+
+#deleteRecipeSection form input[type="submit"]:hover {
+	background: #B7D3B6;
+}
+
+#deleteRecipeSection form textarea[name="ingredients"], #deleteRecipeSection form textarea[name="method"] {
+	height: 200px;
+}

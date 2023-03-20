@@ -1,0 +1,20 @@
+/*------------------
+	Login page
+------------------*/
+#loginSection form {
+	background-color: #EFF171;
+}
+
+#loginSection form h2 {
+	color: #E78DBD;
+    text-align: center;
+}
+
+#loginSection form input[type="submit"] {
+	background: #E78DBD;
+	color: #EFF171;
+} 
+
+#loginSection form input[type="submit"]:hover {
+	background: #B7D3B6;
+}

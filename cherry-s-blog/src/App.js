@@ -1,30 +1,36 @@
-import { CatalogFunction } from "./components/CatalogSection";
-import { Footer } from "./components/Footer";
-import { Navigation } from "./components/Navigation";
+import { Routes, Route } from "react-router-dom";
 
+import { Navigation } from "./components/Navigation";
+import { HomeAndCatalogPage } from "./components/HomeAndCatalogPage";
+import { LoginPage } from "./components/Login";
+import { RegisterPage } from "./components/RegisterPage";
+import { AddRecipePage } from "./components/AddRecipePage";
+import { UserProfilePage } from "./components/UserProfilePage";
+import { ErrorPage } from "./components/ErrorPage";
+import { Footer } from "./components/Footer";
+import { RecipeDetails } from "./components/RecipeDetails";
+
+// document.body.style.backgroundImage = `url('img/pinkGreenBgr.png')`;
 
 function App() {
   return (
-    <>	
+    <>
       <Navigation />
-      <main>
-        <section id="homeSection">
+      <Routes>
+        <Route path="/" element={<HomeAndCatalogPage />}></Route>
+        <Route path="/catalog" element={<HomeAndCatalogPage />}></Route>
+        <Route path="/login" element={<LoginPage />}></Route>
+        <Route path="/register" element={<RegisterPage/>}></Route>
+        <Route path="/addRecipe" element={<AddRecipePage />}></Route>
+        <Route path="/profile" element={<UserProfilePage />}></Route>
 
-          <div className="wrapper">
-            <div id="first">
-              <h1>Cherry's blog</h1>
-              <div id="br"></div>
-              <button><a href="./details.html">THE BEST CHERRY CAKE</a></button>
-            </div>
-            <div id="second">
-              <img src="img/homeImg.jpg" alt="cherryCake"/>
-            </div>
+        {console.log("//TODO add id")}
+        <Route path="/recipes/:id/details" element={<RecipeDetails />}></Route>
+        <Route path="/recipes/:id/delete" element={<></>}></Route>
+        <Route path="/recipes/:id/edit" element={<></>}></Route>
 
-          </div>
-        </section>
-
-        <CatalogFunction />
-      </main>
+        <Route path="*" element={<ErrorPage />}></Route>
+      </Routes>
       <Footer />
     </>
   );

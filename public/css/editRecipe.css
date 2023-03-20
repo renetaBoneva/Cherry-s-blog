@@ -1,0 +1,31 @@
+/*------------------
+     Edit page
+------------------*/
+
+
+#editRecipeSection form {
+	background: #B7D3B6;
+}
+
+#editRecipeSection form h2 {
+	color: #EFF171;
+	text-shadow: -12px 4px 4px rgba(231, 141, 189, 1);
+}
+
+#editRecipeSection form input[type="text"], #editRecipeSection form textarea{
+	color: #B7D3B6;
+}
+
+#editRecipeSection form input[type="submit"] {
+	background: #EFF171;
+	color: #E78DBD;
+} 
+
+#editRecipeSection form input[type="submit"]:hover {
+	background: #E78DBD;
+	color: #EFF171;
+}
+
+#editRecipeSection form textarea[name="ingredients"], #editRecipeSection form textarea[name="method"] {
+	height: 200px;
+}
