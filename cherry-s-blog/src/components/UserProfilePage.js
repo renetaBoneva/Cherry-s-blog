@@ -34,7 +34,7 @@ export function UserProfilePage() {
                     
                 </div>	
                 <div id="editIcons">
-                    <Link to={"/editProfile"}>
+                    <Link to={"/users/:id/edit"}>
                         <i class="bi bi-pencil-fill"></i>
                     </Link>	
                 </div>		
@@ -44,15 +44,15 @@ export function UserProfilePage() {
     
                 <div id="recipesWrapper">
                         <div class="recipe">
-                            <img src="./img/cherryCake.jpg" alt="cherryCake"/>
+                            <img src="/img/cherryCake.jpg" alt="cherryCake"/>
                             <h3><a href="/recipes/">Cherry cake</a></h3>			
                         </div>
                         <div class="recipe">
-                            <img src="./img/cherryPie.jpg" alt="cherryPie"/>
+                            <img src="/img/cherryPie.jpg" alt="cherryPie"/>
                             <h3><a href="/recipes/">Cherry pie</a></h3>			
                         </div>
                         <div class="recipe">
-                            <img src="./img/chocCherry.jpg" alt="chocCherry"/>
+                            <img src="/img/chocCherry.jpg" alt="chocCherry"/>
                             <h3><a href="/recipes/">Chocolate cherry cheesecake</a></h3>
                         </div>
                 </div>

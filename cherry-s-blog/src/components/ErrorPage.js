@@ -6,7 +6,7 @@ export function ErrorPage() {
         <main>
             <section id="errorSection" className="wrapper">
                 <h2>404 Not found</h2>
-                <img src="img/404.png" alt="errorImg" />
+                <img src="/img/404.png" alt="errorImg" />
             </section>
         </main>
     );

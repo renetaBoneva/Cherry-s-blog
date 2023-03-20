@@ -1,5 +1,5 @@
 export function RegisterPage() {
-    document.body.style.backgroundImage = `url('img/yellowPinkBgr.png')`;
+    document.body.style.backgroundImage = `url('/img/yellowPinkBgr.png')`;
 
     return (        
 	<main style={{

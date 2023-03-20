@@ -1,5 +1,5 @@
 export function LoginPage() {
-    document.body.style.backgroundImage = `url('img/pinkYellowBgr.png')`;
+    document.body.style.backgroundImage = `url('/img/pinkYellowBgr.png')`;
 
     return (
         <main style={{

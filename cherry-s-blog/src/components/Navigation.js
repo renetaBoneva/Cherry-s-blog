@@ -19,7 +19,7 @@ export function Navigation() {
                         <li><Link to="/register">Register</Link></li>
                         {/* <!-- Logged in user menu --> */}
                         <li><Link to="/addRecipe">Add recipe</Link></li>
-                        <li><Link to="/profile">My profile</Link></li>
+                        <li><Link to="/users/:id/profile">My profile</Link></li>
                         <li><Link to="/logout">Logout</Link></li>
                     </ul>
                 </div>

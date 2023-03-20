@@ -1,5 +1,5 @@
 export function AddRecipePage() {
-    document.body.style.backgroundImage = `url('img/greenPinkBgr.png')`;
+    document.body.style.backgroundImage = `url('/img/greenPinkBgr.png')`;
 
     return (
         <main style={{
@@ -10,12 +10,13 @@ export function AddRecipePage() {
             <section id="addRecipeSection" class="wrapper">
                 <form>
                     <h2>Add recipe</h2>
-                    <label>Title: </label>
+                    <label name="title" >Title: </label>
                     <input type="text" name="title" />
-                    <label>Image: </label>
+                    <label name="image">Image: </label>
                     <input type="text" name="image" />
-                    <label>Ingredients: </label>
-                    <textarea type="text" rows="5" name="ingredients"></textarea> 				<label>Method: </label>
+                    <label name="ingredients">Ingredients: </label>
+                    <textarea type="text" rows="5" name="ingredients"></textarea> 
+                    <label name="method">Method: </label>
                     <textarea type="text" rows="5" name="method"></textarea>
 
                     <input type="submit" defaultValue="SUBMIT" />
