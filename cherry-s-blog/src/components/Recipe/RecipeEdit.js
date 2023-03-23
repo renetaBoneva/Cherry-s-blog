@@ -10,11 +10,11 @@ export function RecipeEdit() {
             <section id="editRecipeSection" class="wrapper">
                 <form>
                     <h2>Edit recipe</h2>
-                    <label>Title: </label>
+                    <label htmlFor="title">Title: </label>
                     <input type="text" name="title" value="Cherry Cake" />
-                    <label>Image: </label>
+                    <label htmlFor="image">Image: </label>
                     <input type="text" name="image" value="cherryCake.jpg" />
-                    <label>Ingredients: </label>
+                    <label htmlFor="ingredients">Ingredients: </label>
                     <textarea type="text" name="ingredients" rows="5">
                         200g soft unsalted butter, plus extra for the tin
                         200g golden caster sugar
@@ -26,7 +26,7 @@ export function RecipeEdit() {
                         50g ground almonds
                         ½ tsp baking powder
                     </textarea>
-                    <label>Method: </label>
+                    <label  htmlFor="method">Method: </label>
                     <textarea type="text" name="method" rows="5">
                         STEP 1
                         Heat the oven to 180C/160C fan/gas 4. Butter a 900g loaf tin and line with baking parchment. Beat the butter and sugar together until pale and fluffy, then beat in the eggs one at a time, followed by the vanilla and almond extract (if using).
@@ -35,7 +35,7 @@ export function RecipeEdit() {
                         STEP 3
                         Bake for 50-55 mins, or until a skewer inserted in the middle comes out clean. Leave to cool for 10 mins in the tin, then transfer to a wire rack to cool completely. Serve as it is, or mix the icing sugar with the extract and enough milk to make a thick but pourable consistency. Drizzle over the loaf cake, and scatter over the flaked almonds to serve.
                     </textarea>
-                    <input type="submit" defaultValue="SUBMIT" />
+                    <input type="submit" value="SUBMIT" />
                 </form>
             </section>
 

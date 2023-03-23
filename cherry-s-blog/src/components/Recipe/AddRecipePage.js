@@ -10,16 +10,16 @@ export function AddRecipePage() {
             <section id="addRecipeSection" class="wrapper">
                 <form>
                     <h2>Add recipe</h2>
-                    <label name="title" >Title: </label>
+                    <label htmlFor="title" >Title: </label>
                     <input type="text" name="title" />
-                    <label name="image">Image: </label>
+                    <label htmlFor="image">Image: </label>
                     <input type="text" name="image" />
-                    <label name="ingredients">Ingredients: </label>
+                    <label htmlFor="ingredients">Ingredients: </label>
                     <textarea type="text" rows="5" name="ingredients"></textarea> 
-                    <label name="method">Method: </label>
+                    <label htmlFor="method">Method: </label>
                     <textarea type="text" rows="5" name="method"></textarea>
 
-                    <input type="submit" defaultValue="SUBMIT" />
+                    <input type="submit" value="SUBMIT" />
                 </form>
             </section>
 

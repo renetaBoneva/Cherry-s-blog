@@ -9,11 +9,11 @@ export function LoginPage() {
             <section id="loginSection" className="wrapper">
                 <form>
                     <h2>Login</h2>
-                    <label name="email">E-mail: </label>
+                    <label htmlFor="email">E-mail: </label>
                     <input type="text" name="email" />
-                    <label name="password">Password: </label>
+                    <label htmlFor="password">Password: </label>
                     <input type="password" name="password" />
-                    <input type="submit" defaultValue={"SUBMIT"} />
+                    <input type="submit" value={"SUBMIT"} />
                 </form>
             </section>
         </main>)

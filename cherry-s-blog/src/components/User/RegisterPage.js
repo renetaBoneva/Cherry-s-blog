@@ -10,19 +10,19 @@ export function RegisterPage() {
 		<section id="registerSection" class="wrapper">
 			<form>
 				<h2>Register</h2>
-				<label>Username: </label>
+				<label htmlFor="username">Username: </label>
 				<input type="text" name="username"/>
-				<label>E-mail: </label>
+				<label htmlFor="email">E-mail: </label>
 				<input type="text" name="email"/>
-				<label>Password: </label>
+				<label htmlFor="password">Password: </label>
 				<input type="password" name="password"/>
-				<label>Repeat password: </label>
+				<label htmlFor="rePass">Repeat password: </label>
 				<input type="password" name="rePass"/>
-				<label>Location: </label>
+				<label htmlFor="location">Location: </label>
 				<input type="text" name="location"/>
-				<label>Image: </label>
+				<label htmlFor="image">Image: </label>
 				<input type="text" name="image"/>
-				<label>Level: </label>
+				<label htmlFor="level">Level: </label>
 				<input type="text" name="level"/>
 
 				<input type="submit" defaultValue="SUBMIT"/>
