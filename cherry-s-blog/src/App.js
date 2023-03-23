@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { Navigation } from "./components/Header/Navigation";
-import { HomeAndCatalogPage } from "./components/HomeAndCatalogPage";
+import { HomeAndCatalogPage } from "./components/LandingPage/HomeAndCatalogPage";
 import { LoginPage } from "./components/User/Login";
 import { RegisterPage } from "./components/User/RegisterPage";
 import { AddRecipePage } from "./components/Recipe/AddRecipePage";
@@ -13,8 +13,6 @@ import { RecipeDetails } from "./components/Recipe/RecipeDetails";
 import { RecipeDelete } from "./components/Recipe/RecipeDelete";
 import { RecipeEdit } from "./components/Recipe/RecipeEdit";
 import { UserProfileEdit } from "./components/User/UserProfileEdit";
-
-// document.body.style.backgroundImage = `url('/img/pinkGreenBgr.png')`;
 
 function App() {
   const [recipesData, setRecipesData ] = useState([{
