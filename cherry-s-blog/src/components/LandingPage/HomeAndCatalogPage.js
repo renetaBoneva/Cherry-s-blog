@@ -1,4 +1,4 @@
-import { CatalogSection } from "./CatalogSection";
+import { CatalogSection } from "../Catalog/CatalogSection";
 
 export function HomeAndCatalogPage() {
     document.body.style.backgroundImage = `none`;

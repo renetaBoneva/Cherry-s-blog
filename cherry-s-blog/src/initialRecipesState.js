@@ -1,4 +1,4 @@
-[
+export const jsonInitialStore = [
     {
         "_id": 1,
         "title": "Cherry cake",
@@ -183,4 +183,4 @@
         "comments": [],
         "ownerId": "reneta"
     }
-]
+];
