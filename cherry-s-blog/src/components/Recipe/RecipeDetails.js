@@ -1,8 +1,26 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export function RecipeDetails() {
+    const [comForm, setComForm] = useState({
+        username: "reneta",
+        commentValue: ""
+    })
     document.body.style.backgroundImage = `none`;
     document.body.style.backgroundColor= '#C6CACB';
+
+    console.log("//TODO get recipe details");
+    console.log("//TODO get comments");
+   
+    function onComChange(e) {
+        setComForm(state => ({...state, [e.target.name]: e.target.value}))
+    }
+
+    function onCommentSubmit(e) {
+        e.preventDefault();
+        console.log(comForm);
+        console.log("//TODO send post request to the server.");
+    }
 
     return (
 
@@ -67,8 +85,8 @@ export function RecipeDetails() {
                             </div>
                         </div>
 
-                        <form id="newCommentForm">
-                            <textarea placeholder="Add new comment..."></textarea>
+                        <form id="newCommentForm" onSubmit={onCommentSubmit}>
+                            <textarea placeholder="Add new comment..." name="commentValue" value={comForm.commentValue} onChange={onComChange} ></textarea>
                             <button><i className="bi bi-send-fill"></i></button>
                         </form>
                     </div>

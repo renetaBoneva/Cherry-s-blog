@@ -184,3 +184,10 @@ export const jsonInitialStore = [
         "ownerId": "reneta"
     }
 ];
+
+// export function onStartInitalData(isStarted, setIsStarted){
+//     if(!isStarted) {
+//         setIsStarted(true);
+//         return jsonInitialStorel;
+//     }
+// }

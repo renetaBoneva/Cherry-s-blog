@@ -13,10 +13,13 @@ import { RecipeDetails } from "./components/Recipe/RecipeDetails";
 import { RecipeDelete } from "./components/Recipe/RecipeDelete";
 import { RecipeEdit } from "./components/Recipe/RecipeEdit";
 import { UserProfileEdit } from "./components/User/UserProfileEdit";
-import { jsonInitialStore } from "./initialRecipesState";
+import { onStartInitalData, jsonInitialStore } from "./initialRecipesState";
 
 function App() {
-  const [recipesData, setRecipesData ] = useState(jsonInitialStore);
+  const [recipesData, setRecipesData] = useState(jsonInitialStore);
+
+  // const [isStarted, setIsStarted ] = useState(false);
+  // onStartInitalData(isStarted, setIsStarted)
 
   return (
     <>
@@ -26,12 +29,11 @@ function App() {
         <Route path="/catalog" element={<HomeAndCatalogPage />}></Route>
         <Route path="/login" element={<LoginPage />}></Route>
         <Route path="/register" element={<RegisterPage />}></Route>
-        <Route path="/addRecipe" element={<AddRecipePage />}></Route>
+        <Route path="/addRecipe" element={<AddRecipePage setRecipesData={setRecipesData} />}></Route>
 
         <Route path="/users/:id/profile" element={<UserProfilePage />}></Route>
         <Route path="/users/:id/edit" element={<UserProfileEdit />}></Route>
 
-        {console.log("//TODO setup id")}
         <Route path="/recipes/:id/details" element={<RecipeDetails />}></Route>
         <Route path="/recipes/:id/delete" element={<RecipeDelete />}></Route>
         <Route path="/recipes/:id/edit" element={<RecipeEdit />}></Route>

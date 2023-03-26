@@ -15,19 +15,19 @@ export function UserProfilePage() {
                     <i class="bi bi-person-fill"></i>		
                 </div>
                 <div id="profileInfo">
-                    <div class="infoDiv">
+                    <div className="infoDiv">
                         <p>Username: </p>
                         <p>Reneta Boneva</p>
                     </div>
-                    <div class="infoDiv">
+                    <div className="infoDiv">
                         <p>Level: </p>
                         <p>Beginner</p>
                     </div>
-                    <div class="infoDiv">
+                    <div className="infoDiv">
                         <p>Location: </p>
                         <p>Burgas, Bulgaria</p>
                     </div>
-                    <div class="infoDiv">
+                    <div className="infoDiv">
                         <p>E-mail: </p>
                         <p>reneta.boneva@abv.bg</p>
                     </div>
@@ -43,15 +43,15 @@ export function UserProfilePage() {
                 <h2>Your recipes</h2>
     
                 <div id="recipesWrapper">
-                        <div class="recipe">
+                        <div className="recipe">
                             <img src="/img/cherryCake.jpg" alt="cherryCake"/>
                             <h3><a href="/recipes/">Cherry cake</a></h3>			
                         </div>
-                        <div class="recipe">
+                        <div className="recipe">
                             <img src="/img/cherryPie.jpg" alt="cherryPie"/>
                             <h3><a href="/recipes/">Cherry pie</a></h3>			
                         </div>
-                        <div class="recipe">
+                        <div className="recipe">
                             <img src="/img/chocCherry.jpg" alt="chocCherry"/>
                             <h3><a href="/recipes/">Chocolate cherry cheesecake</a></h3>
                         </div>
