@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function CatalogSection(){
     return (
         <section id="catalogSection">
@@ -8,27 +10,27 @@ export function CatalogSection(){
 
               <div className="recipe">
                 <img src="./img/bananaPancakes.jpg" alt="bananaPancakes"/>
-                  <h3> <a href="/recipes/">Banana pancakes</a></h3>
+                  <h3> <Link to={"/recipes/"}>Banana pancakes</Link></h3>
               </div>
               <div className="recipe">
                 <img src="./img/cherryCake.jpg" alt="cherryCake"/>
-                  <h3><a href="/recipes/">Cherry cake</a></h3>
+                  <h3><Link to={"/recipes/"}>Cherry cake</Link></h3>
               </div>
               <div className="recipe">
                 <img src="./img/cherryPie.jpg" alt="cherryPie"/>
-                  <h3><a href="/recipes/">Cherry pie</a></h3>
+                  <h3><Link to={"/recipes/"}>Cherry pie</Link></h3>
               </div>
               <div className="recipe">
                 <img src="./img/cherryCheesecake.jpg" alt="cherryCheesecake"/>
-                  <h3><a href="/recipes/">Cherry cheesecake</a></h3>
+                  <h3><Link to={"/recipes/"}>Cherry cheesecake</Link></h3>
               </div>
               <div className="recipe">
                 <img src="./img/chocCherry.jpg" alt="chocCherry"/>
-                  <h3><a href="/recipes/">Chocolate cherry cheesecake</a></h3>
+                  <h3><Link to={"/recipes/"}>Chocolate cherry cheesecake</Link></h3>
               </div>
               <div className="recipe">
                 <img src="./img/cherryMuffins.jpg" alt="cherryMuffins"/>
-                  <h3><a href="/recipes/">Cherry muffins</a></h3>
+                  <h3><Link to={"/recipes/"}>Cherry muffins</Link></h3>
               </div>
 
             </div>

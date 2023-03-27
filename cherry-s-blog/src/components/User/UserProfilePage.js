@@ -9,10 +9,10 @@ export function UserProfilePage() {
             display: "flex",
             justifyContent: "center"
         }}>
-            <section id="myProfileSection" class="wrapper">
+            <section id="myProfileSection" className="wrapper">
             <div id="profileDiv">
                 <div id="profileImg">
-                    <i class="bi bi-person-fill"></i>		
+                    <i className="bi bi-person-fill"></i>		
                 </div>
                 <div id="profileInfo">
                     <div className="infoDiv">
@@ -35,7 +35,7 @@ export function UserProfilePage() {
                 </div>	
                 <div id="editIcons">
                     <Link to={"/users/:id/edit"}>
-                        <i class="bi bi-pencil-fill"></i>
+                        <i className="bi bi-pencil-fill"></i>
                     </Link>	
                 </div>		
             </div>
@@ -45,15 +45,15 @@ export function UserProfilePage() {
                 <div id="recipesWrapper">
                         <div className="recipe">
                             <img src="/img/cherryCake.jpg" alt="cherryCake"/>
-                            <h3><a href="/recipes/">Cherry cake</a></h3>			
+                            <h3><Link to={"/recipes/"}>Cherry cake</Link></h3>			
                         </div>
                         <div className="recipe">
                             <img src="/img/cherryPie.jpg" alt="cherryPie"/>
-                            <h3><a href="/recipes/">Cherry pie</a></h3>			
+                            <h3><Link to={"/recipes/"}>Cherry pie</Link></h3>			
                         </div>
                         <div className="recipe">
                             <img src="/img/chocCherry.jpg" alt="chocCherry"/>
-                            <h3><a href="/recipes/">Chocolate cherry cheesecake</a></h3>
+                            <h3><Link to={"/recipes/"}>Chocolate cherry cheesecake</Link></h3>
                         </div>
                 </div>
             </div>

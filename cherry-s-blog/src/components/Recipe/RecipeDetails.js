@@ -34,10 +34,10 @@ export function RecipeDetails() {
                         <div id="nameDiv">
                             <h2>Cherry cake</h2>
                             <div id="iconsDiv">
-                                <Link href="/recipes/id/edit">
+                                <Link to={"/recipes/id/edit"}>
                                     <i className="bi bi-pencil-fill"></i>
                                 </Link>
-                                <Link href="/recipes/id/delete">
+                                <Link to={"/recipes/id/delete"}>
                                     <i className="bi bi-trash"></i>
                                 </Link>
                             </div>
