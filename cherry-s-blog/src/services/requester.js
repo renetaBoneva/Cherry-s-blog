@@ -32,7 +32,7 @@ async function requester(method, token, url , data) {
     return result;
 }
 
-export function requestFactory() {
+export function requestFactory(token) {
     if(!token) {
         const serializedToken = localStorage.getItem('auth');
         if(serializedToken) {
