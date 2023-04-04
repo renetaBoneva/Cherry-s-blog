@@ -17,10 +17,15 @@ export function authServiceFactory(token) {
     function logout() {
         return request.get(`${baseURL}/register`)
     }
+
+    function getUserDetails() {
+        return request.get(`${baseURL}/me`);
+    }
     
     return {
         postLogin,
         postRegister,
-        logout
+        logout,
+        getUserDetails
     }
 }

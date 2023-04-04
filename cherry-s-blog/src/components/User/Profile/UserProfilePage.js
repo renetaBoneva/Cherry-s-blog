@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import { Link, useParams } from "react-router-dom";
-import { AuthContext } from "../../contexts/AuthContext";
+import { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthContext";
 
 export function UserProfilePage() {
     document.body.style.backgroundImage = `none`;
