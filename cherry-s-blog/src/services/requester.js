@@ -1,10 +1,8 @@
-
-
-async function requester(method, token, url , data) {
+async function requester(method, token, url, data) {
     let options = {};
-    if(method !== "GET") {
+    if (method !== "GET") {
         options.method = method;
-        if(data) {
+        if (data) {
             options.headers = {
                 "Content-Type": "application/json"
             }
@@ -12,38 +10,38 @@ async function requester(method, token, url , data) {
         }
     }
 
-    if(token) {
+    if (token) {
         options.headers = {
             ...options.headers,
             "X-Authorization": token
         }
     }
-
+    
     const res = await fetch(url, options);
-    if(res.status === 204) {
+    if (res.status === 204) {
         return {}
     }
-
     const result = await res.json();
-    if(!res.ok) {
+    if (!res.ok) {
         throw result;
     }
-    
+
     return result;
 }
 
 export function requestFactory(token) {
-    if(!token) {
+    if (!token) {
         const serializedToken = localStorage.getItem('auth');
-        if(serializedToken) {
-            token = JSON.parse(serializedToken);
+        if (serializedToken) {
+            const auth = JSON.parse(serializedToken);
+            token = auth.accessToken;
         }
     }
 
     return {
-        get: requester(null, "GET", token),
-        post: requester(null, "POST", token),
-        put: requester(null, "PUT", token),
-        del: requester(null, "DELETE", token)
+        get: requester.bind(null, "GET", token),
+        post: requester.bind(null, "POST", token),
+        put: requester.bind(null, "PUT", token),
+        del: requester.bind(null, "DELETE", token)
     }
 }

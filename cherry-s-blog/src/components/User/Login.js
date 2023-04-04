@@ -1,28 +1,40 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
+
+import { useForm } from '../../hooks/useForm'
 
 export function LoginPage() {
-    const [loginData, setLoginData] = useState({
-        email: "",
-        password: ""
-    })
     document.body.style.backgroundImage = `url('/img/pinkYellowBgr.png')`;
 
-    function onChange(e) {
-        setLoginData(state => ({...state, [e.target.name]: e.target.value}))
-    }
+    const { onLoginHandler } = useContext(AuthContext);
+    const {values, chnageValues, onSubmitClick} = useForm({
+        email: "",
+        password: ""
+    }, onLoginHandler)
+
     return (
         <main style={{
             display: "flex",
             justifyContent: "center"
         }}>
             <section id="loginSection" className="wrapper">
-                <form>
+                <form method="POST" onSubmit={onSubmitClick}>
                     <h2>Login</h2>
                     <label htmlFor="email">E-mail: </label>
-                    <input type="text" name="email" value={loginData.email} onChange={onChange} />
+                    <input
+                        type="text"
+                        name="email"
+                        value={values.email}
+                        onChange={chnageValues}
+                    />
                     <label htmlFor="password">Password: </label>
-                    <input type="password" name="password" value={loginData.password} onChange={onChange}  />
-                    <input type="submit" value={"SUBMIT"} />
+                    <input
+                        type="password"
+                        name="password"
+                        value={values.password}
+                        onChange={chnageValues}
+                    />
+                    <input type="submit" value="LOGIN" />
                 </form>
             </section>
         </main>)

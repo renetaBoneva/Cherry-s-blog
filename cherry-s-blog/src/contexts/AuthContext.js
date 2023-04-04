@@ -19,7 +19,7 @@ export function AuthProvider({ children }) {
             setAuth(result);
             navigate('/catalog');
         } catch (err) {
-            console.log(err.message);
+            return console.log(err.message);
         }
     }
 
