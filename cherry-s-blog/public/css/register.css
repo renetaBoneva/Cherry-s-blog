@@ -7,15 +7,31 @@
 
 #registerSection form h2 {
 	color: #EFF171;
-    text-align: center;
+	text-align: center;
 }
 
 #registerSection form input[type="submit"] {
 	background: #B7D3B6;
 	color: #15491B;
-} 
+}
 
 #registerSection form input[type="submit"]:hover {
 	background: #15491B;
 	color: #B7D3B6;
+}
+
+#registerSection form select {
+	font-family: 'Philosopher';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 40px;
+
+	width: 100%;
+	padding: 8px 24px;
+	height: 64px;
+	background: #FFFFFF;
+	border-radius: 50px;
+	border: none;
+
 }

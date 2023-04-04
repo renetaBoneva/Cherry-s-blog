@@ -3,11 +3,11 @@ import { AuthContext } from "../../contexts/AuthContext";
 
 import { useForm } from '../../hooks/useForm'
 
-export function LoginPage() {
+export function Login() {
     document.body.style.backgroundImage = `url('/img/pinkYellowBgr.png')`;
 
     const { onLoginHandler } = useContext(AuthContext);
-    const {values, chnageValues, onSubmitClick} = useForm({
+    const {values, changeValues, onSubmitClick} = useForm({
         email: "",
         password: ""
     }, onLoginHandler)
@@ -25,14 +25,14 @@ export function LoginPage() {
                         type="text"
                         name="email"
                         value={values.email}
-                        onChange={chnageValues}
+                        onChange={changeValues}
                     />
                     <label htmlFor="password">Password: </label>
                     <input
                         type="password"
                         name="password"
                         value={values.password}
-                        onChange={chnageValues}
+                        onChange={changeValues}
                     />
                     <input type="submit" value="LOGIN" />
                 </form>

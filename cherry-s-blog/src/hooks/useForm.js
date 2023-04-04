@@ -4,7 +4,7 @@ import { useState } from "react"
 export function useForm(initialData, submitHandler){
     const [values, setValues] = useState(initialData);
 
-    function chnageValues(e) {        
+    function changeValues(e) {        
         setValues(state => ({ ...state, [e.target.name]: e.target.value }))
     }
 
@@ -14,5 +14,5 @@ export function useForm(initialData, submitHandler){
         submitHandler(values);
     }
 
-    return {values, chnageValues, onSubmitClick};
+    return {values, changeValues, onSubmitClick};
 }

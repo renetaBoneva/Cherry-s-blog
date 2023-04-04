@@ -14,18 +14,38 @@ export function AuthProvider({ children }) {
     const authService = authServiceFactory(auth.accessToken);
 
     async function onLoginHandler(loginData) {
+        let result = auth;
         try {
-            const result = await authService.postLogin(loginData);
-            setAuth(result);
-            navigate('/catalog');
+            result = await authService.postLogin(loginData);
         } catch (err) {
             return console.log(err.message);
         }
+
+        const { password, rePass, ...userData } = result;
+        setAuth(userData);
+        navigate('/catalog');
+    }
+
+    async function onRegisterHandler(registerData) {
+        let result = auth;
+        try {
+            result = await authService.postRegister(registerData);
+        } catch (err) {
+            return console.log(err.message);
+        }
+
+        const { password, rePass, ...userData } = result;
+        setAuth(userData);
+        navigate('catalog')
     }
 
     const context = {
+        auth,
+        userId: auth._id,
         token: auth.accessToken,
+        isAuthenticated: !!auth.accessToken,
         onLoginHandler,
+        onRegisterHandler,
     }
 
     return (
