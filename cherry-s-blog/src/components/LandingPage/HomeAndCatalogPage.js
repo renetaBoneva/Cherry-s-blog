@@ -1,5 +1,5 @@
 import { CatalogSection } from "../Catalog/CatalogSection";
-import { Link } from "react-router-dom";
+import { Home } from "./Home";
 
 export function HomeAndCatalogPage() {
     document.body.style.backgroundImage = `none`;
@@ -7,21 +7,7 @@ export function HomeAndCatalogPage() {
 
     return (
         <main>
-            <section id="homeSection">
-
-                <div className="wrapper">
-                    <div id="first">
-                        <h1>Cherry's blog</h1>
-                        <div id="br"></div>
-                        <button><Link to={"/recipes/id/details"}>THE BEST CHERRY CAKE</Link></button>
-                    </div>
-                    <div id="second">
-                        <img src="/img/homeImg.jpg" alt="cherryCake" />
-                    </div>
-
-                </div>
-            </section>
-
+            <Home />
             <CatalogSection />
         </main>
     );
