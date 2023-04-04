@@ -14,8 +14,13 @@ export function authServiceFactory(token) {
         return request.post(`${baseURL}/register`, registerData) 
     }
 
+    function logout() {
+        return request.get(`${baseURL}/register`)
+    }
+    
     return {
         postLogin,
         postRegister,
+        logout
     }
 }

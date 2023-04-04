@@ -6,7 +6,7 @@ import { useForm } from '../../hooks/useForm'
 export function Login() {
     document.body.style.backgroundImage = `url('/img/pinkYellowBgr.png')`;
 
-    const { onLoginHandler } = useContext(AuthContext);
+    const { onLoginHandler, auth } = useContext(AuthContext);
     const {values, changeValues, onSubmitClick} = useForm({
         email: "",
         password: ""

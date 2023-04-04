@@ -39,6 +39,12 @@ export function AuthProvider({ children }) {
         navigate('catalog')
     }
 
+    async function onLogoutHandler(){
+        const result = await authService.logout();
+        console.log(result);
+        setAuth({})
+    }
+
     const context = {
         auth,
         userId: auth._id,
@@ -46,6 +52,7 @@ export function AuthProvider({ children }) {
         isAuthenticated: !!auth.accessToken,
         onLoginHandler,
         onRegisterHandler,
+        onLogoutHandler
     }
 
     return (
