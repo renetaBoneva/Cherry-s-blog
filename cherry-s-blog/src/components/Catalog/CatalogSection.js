@@ -1,41 +1,27 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { RecipeContext } from "../../contexts/RecipesContext";
+import { RecipeTemplateCatalog } from "./RecipeTemlateCatalog";
 
-export function CatalogSection(){
-    return (
-        <section id="catalogSection">
+export function CatalogSection() {
 
-          <div className="wrapper">
-            <h2>Catalog</h2>
-            <div id="recipesWrapper">
+  const { recipesData } = useContext(RecipeContext);
 
-              <div className="recipe">
-                <img src="./img/bananaPancakes.jpg" alt="bananaPancakes"/>
-                  <h3> <Link to={"/recipes/"}>Banana pancakes</Link></h3>
-              </div>
-              <div className="recipe">
-                <img src="./img/cherryCake.jpg" alt="cherryCake"/>
-                  <h3><Link to={"/recipes/"}>Cherry cake</Link></h3>
-              </div>
-              <div className="recipe">
-                <img src="./img/cherryPie.jpg" alt="cherryPie"/>
-                  <h3><Link to={"/recipes/"}>Cherry pie</Link></h3>
-              </div>
-              <div className="recipe">
-                <img src="./img/cherryCheesecake.jpg" alt="cherryCheesecake"/>
-                  <h3><Link to={"/recipes/"}>Cherry cheesecake</Link></h3>
-              </div>
-              <div className="recipe">
-                <img src="./img/chocCherry.jpg" alt="chocCherry"/>
-                  <h3><Link to={"/recipes/"}>Chocolate cherry cheesecake</Link></h3>
-              </div>
-              <div className="recipe">
-                <img src="./img/cherryMuffins.jpg" alt="cherryMuffins"/>
-                  <h3><Link to={"/recipes/"}>Cherry muffins</Link></h3>
-              </div>
+  return (
+    <section id="catalogSection">
 
-            </div>
+      <div className="wrapper">
+        <h2>Catalog</h2>
+        {recipesData.length > 0 ? (
+          <div id="recipesWrapper">
+            {recipesData.map(recipe => <RecipeTemplateCatalog key={recipe._id} {...recipe} />)}
           </div>
+        )
+          : (
+            <div id="recipesWrapper" style={{justifyContent: "center"}}>
+              <h2 style={{marginBottom: "40px"}}>No recipes yet</h2>
+            </div>)}
+      </div>
 
-        </section>
-    );
+    </section>
+  );
 }

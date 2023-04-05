@@ -1,9 +1,8 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 import { recipesServiceFactory } from "../services/recipesService";
 import { useService } from "../hooks/useService";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "./AuthContext";
 
 export const RecipeContext = createContext();
 
