@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export const RecipeContext = createContext();
 
 export function RecipesProvider({ children }) {
-const [recipesData, setRecipesData] = useState({});
+    const [recipesData, setRecipesData] = useState({});
     const navigate = useNavigate();
     const recipesService = useService(recipesServiceFactory);
 
@@ -33,7 +33,19 @@ const [recipesData, setRecipesData] = useState({});
         setRecipesData(state => ({ ...state, result }))
     }
 
+    async function deleteRecipeHandler(data) {
+        const id = data._id;
+        try {
+            const result = await recipesService.del(id);
+            setRecipesData(state => state.filter(r => r._id !== id))
+        }
+        catch (err) {
+            console.log(err.message);
+        }
+    }
+
     async function onCommentSubmit(comment) {
+        console.log('//TODO handle comments');
         console.log(comment);
     }
 
@@ -41,7 +53,8 @@ const [recipesData, setRecipesData] = useState({});
         recipesData,
         setRecipesData,
         createRecipeHandler,
-        onCommentSubmit
+        onCommentSubmit,
+        deleteRecipeHandler
     };
 
     return (
