@@ -42,6 +42,8 @@
 }
 
 #recipeHeader img {
+    max-height: 648px;
+    object-fit: cover;
 	width: 100%;
 	border-radius: 50px;
 	filter: drop-shadow( -20px 20px 0px rgba(231, 141, 189, 1));

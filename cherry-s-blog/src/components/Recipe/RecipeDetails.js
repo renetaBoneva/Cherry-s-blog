@@ -4,6 +4,7 @@ import { RecipeContext } from "../../contexts/RecipesContext";
 import { useForm } from "../../hooks/useForm";
 import { useService } from "../../hooks/useService";
 import { recipesServiceFactory } from "../../services/recipesService";
+import { AuthContext } from "../../contexts/AuthContext";
 
 export function RecipeDetails() {
     document.body.style.backgroundImage = `none`;
@@ -13,6 +14,8 @@ export function RecipeDetails() {
     const [currentRecipe, setCurrentRecipe] = useState({});
     const recipeService = useService(recipesServiceFactory);
     const { onCommentSubmit } = useContext(RecipeContext);
+    const { userId } = useContext(AuthContext);
+    const isOwner = userId === currentRecipe._ownerId;
     const { values, changeValues, onSubmitClick } = useForm({
         comment: ""
     }, onCommentSubmit)
@@ -37,14 +40,15 @@ export function RecipeDetails() {
                         </div>
                         <div id="nameDiv">
                             <h2>{currentRecipe.title}</h2>
-                            <div id="iconsDiv">
-                                <Link to={`/recipes/${currentRecipe._id}/edit`}>
-                                    <i className="bi bi-pencil-fill"></i>
-                                </Link>
-                                <Link to={`/recipes/${currentRecipe._id}/delete`}>
-                                    <i className="bi bi-trash"></i>
-                                </Link>
-                            </div>
+                            {isOwner && (
+                                <div id="iconsDiv">
+                                    <Link to={`/recipes/${currentRecipe._id}/edit`}>
+                                        <i className="bi bi-pencil-fill"></i>
+                                    </Link>
+                                    <Link to={`/recipes/${currentRecipe._id}/delete`}>
+                                        <i className="bi bi-trash"></i>
+                                    </Link>
+                                </div>)}
                         </div>
                     </div>
 
