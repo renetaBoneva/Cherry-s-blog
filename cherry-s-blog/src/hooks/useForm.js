@@ -14,5 +14,9 @@ export function useForm(initialData, submitHandler){
         submitHandler(values);
     }
 
-    return {values, changeValues, onSubmitClick};
+    function editValues(newValues) {
+        setValues(newValues)
+    }
+    
+    return {values, changeValues, onSubmitClick, editValues};
 }

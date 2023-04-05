@@ -31,7 +31,7 @@ export function RecipeDelete() {
                     <label htmlFor="method">Method: </label>
                     <textarea type="text" name="method" rows="5" value={formData.method} onChange={()=>{}}  disabled={true}></textarea>
 
-                    <input type="submit" value="SUBMIT" />
+                    <input type="submit" value="DELETE" />
                 </form>
             </section>
         </main>

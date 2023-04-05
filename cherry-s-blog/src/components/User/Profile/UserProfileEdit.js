@@ -23,7 +23,7 @@ export function UserProfileEdit() {
                 editValues(userData);
             })
     }, [])
-
+    
     return (
         <main style={{
             display: "flex",
@@ -31,7 +31,7 @@ export function UserProfileEdit() {
         }}>
 
             <section id="editSection" className="wrapper">
-                <form onSubmit={onSubmitClick}>
+                <form method="POST" onSubmit={onSubmitClick}>
                     <h2>Edit profile</h2>
                     <label htmlFor="username">Username: </label>
                     <input

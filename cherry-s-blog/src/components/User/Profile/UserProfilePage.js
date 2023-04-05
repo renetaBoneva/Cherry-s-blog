@@ -17,7 +17,7 @@ export function UserProfilePage() {
             <section id="myProfileSection" className="wrapper">
                 <div id="profileDiv">
                     {auth.imageUrl ? (
-                        <img src={auth.imageUrl} id="profileImg" />
+                        <img src={auth.imageUrl} id="profileImg" alt="profilePhoto" />
                     ) : (
                         <div id="profileImg">
                             <i className="bi bi-person-fill"></i>
@@ -30,17 +30,19 @@ export function UserProfilePage() {
                             <p>{auth.username}</p>
                         </div>
                         <div className="infoDiv">
-                            <p>Level: </p>
-                            <p>{auth.level}</p>
-                        </div>
-                        <div className="infoDiv">
-                            <p>Location: </p>
-                            <p>{auth.location}</p>
-                        </div>
-                        <div className="infoDiv">
                             <p>E-mail: </p>
                             <p>{auth.email}</p>
                         </div>
+                        <div className="infoDiv">
+                            <p>Level: </p>
+                            <p>{auth.level}</p>
+                        </div>
+                        {auth.location && (
+                            <div className="infoDiv">
+                                <p>Location: </p>
+                                <p>{auth.location}</p>
+                            </div>
+                        )}
 
                     </div>
                     <div id="editIcons">
