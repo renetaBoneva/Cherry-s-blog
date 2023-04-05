@@ -19,19 +19,3 @@
 	background: #15491B;
 	color: #B7D3B6;
 }
-
-#registerSection form select {
-	font-family: 'Philosopher';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 30px;
-	line-height: 40px;
-
-	width: 100%;
-	padding: 8px 24px;
-	height: 64px;
-	background: #FFFFFF;
-	border-radius: 50px;
-	border: none;
-
-}

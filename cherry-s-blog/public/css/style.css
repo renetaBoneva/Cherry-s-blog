@@ -198,7 +198,8 @@ form label {
 }
 
 form input[type="text"],
-form input[type="password"] {
+form input[type="password"],
+form select {
 	font-family: 'Philosopher';
 	font-style: normal;
 	font-weight: 400;

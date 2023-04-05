@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -40,9 +40,23 @@ export function AuthProvider({ children }) {
     }
 
     async function onLogoutHandler(){
-        const result = await authService.logout();
-        console.log(result);
+        await authService.logout();
         setAuth({})
+    }
+
+    async function getDetails() {
+        const result = await authService.getUserDetails();
+        return result;
+    }
+
+    async function EditUserProfile(data) {
+        console.log('//TODO validate data');
+        console.log('//TODO change server data');
+
+        const updatedAuth = {...auth, ...data};
+        
+        setAuth(updatedAuth);
+        navigate(`/users/${auth._id}/profile`)
     }
 
     const context = {
@@ -52,7 +66,9 @@ export function AuthProvider({ children }) {
         isAuthenticated: !!auth.accessToken,
         onLoginHandler,
         onRegisterHandler,
-        onLogoutHandler
+        onLogoutHandler,
+        getDetails,
+        EditUserProfile,
     }
 
     return (

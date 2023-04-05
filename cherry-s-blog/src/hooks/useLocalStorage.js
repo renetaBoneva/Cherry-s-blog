@@ -3,7 +3,7 @@ import { useState } from "react";
 export function useLocalStorage(key, initialData) {
     const [state, setState] = useState(() => {
         const serializedPersistedState = localStorage.getItem(key);
-
+        
         if(serializedPersistedState){
             const persistedState = JSON.parse(serializedPersistedState);
             return persistedState;

@@ -9,7 +9,7 @@ async function requester(method, token, url, data) {
             options.body = JSON.stringify(data);
         }
     }
-
+    
     if (token) {
         options.headers = {
             ...options.headers,
