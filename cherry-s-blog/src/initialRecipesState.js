@@ -1,8 +1,8 @@
 export const jsonInitialStore = [
     {
-        "_id": 1,
+        // "_id": 1,
         "title": "Cherry cake",
-        "img": "/img/cherryCake.jpg",
+        "imageUrl": "/img/cherryCake.jpg",
         "ingredients": [
             "200g soft unsalted butter, plus extra for the tin",
             "200g golden caster sugar",
@@ -23,18 +23,18 @@ export const jsonInitialStore = [
             "Bake for 50-55 mins, or until a skewer inserted in the middle comes out clean. Leave to cool for 10 mins in the tin, then transfer to a wire rack to cool completely. Serve as it is, or mix the icing sugar with the extract and enough milk to make a thick but pourable consistency. Drizzle over the loaf cake, and scatter over the flaked almonds to serve.",
             "Source: https://www.bbcgoodfood.com/recipes/cherry-loaf-cake"
         ],
-        "comments": [
-            {
-                "name": "Lili Semizova",
-                "value": "That’s my favorite cake to cook! "
-            }
-        ],
-        "ownerId": "reneta"
+        // "comments": [
+        //     {
+        //         "name": "Lili Semizova",
+        //         "value": "That’s my favorite cake to cook! "
+        //     }
+        // ],
+        // "ownerId": "reneta"
     },
     {
-        "_id": 2,
+        // "_id": 2,
         "title": "Banana pancakes",
-        "img": "/img/bananaPancakes.jpg",
+        "imageUrl": "/img/bananaPancakes.jpg",
         "ingredients": [
             "1 cup all-purpose flour",
             "1 tablespoon white sugar",
@@ -54,13 +54,13 @@ export const jsonInitialStore = [
             "Serve your banana pancakes immediately. They're delicious alone or with your favorite pancake toppings.",
             "Source: https://www.allrecipes.com/recipe/20334/banana-pancakes-i/"
         ],
-        "comments": [],
-        "ownerId": "reneta"
+        // "comments": [],
+        // "ownerId": "reneta"
     },
     {
-        "_id": 3,
+        // "_id": 3,
         "title": "Cherry pie",
-        "img": "/img/cherryPie.jpg",
+        "imageUrl": "/img/cherryPie.jpg",
         "ingredients": [
             "4 cups fresh, sour cherries or three (14.5 oz) cans sour cherries",
             "3/4 cup granulated sugar",
@@ -81,13 +81,13 @@ export const jsonInitialStore = [
             "  1) Preheat oven to 400 degrees F. Set aside a 9'' pie pan. (If using canned cherries, there will be enough filling for a deep dish pie dish).\n  2) Remove one chilled pie crust dough from the fridge. On a lightly floured counter, roll out your dough to about 12'' in diameter. Gently place in the bottom of pie dish. Spoon the cherry filling into the unbaked crust and sprinkle a little cinnamon over the filling. (If using fresh cherries, add a few small pieces of butter on top).\n  3) Remove the second pie crust from the fridge and roll it out in a similar manner. Use a pizza cutter, knife or pastry wheel to cut the crust into long strips, about 1/2'' wide. Lay strips over the crust in a lattice pattern. (If you're lazy, like me, you can just lay half of the strips going one direction, and the others on top, going perpendicular, leaving a small space between each.)\n  4) Pinch the edges of the top and bottom pie crusts together and crimp the edge, if you like. Brush a thin layer of beaten egg white over the top of the pie crust and sprinkle some granulated sugar on top.\n  5) Bake at 400 degrees F for about 40-45 minutes. Check after about 25 minutes and gently place a piece of tinfoil over the top crust to keep it from getting too brown.\n  6) Remove to a wire cooling rack and allow to cool for several hours. Once cooled completely you can cut and serve it, or cover it and refrigerate it overnight to serve the next day.\n  7) Leftover cherry pie will last up to 5 days, stored in the fridge.",
             "Source: https: //tastesbetterfromscratch.com/cherry-pie/"
         ],
-        "comments": [],
-        "ownerId": "reneta"
+        // "comments": [],
+        // "ownerId": "reneta"
     },
     {
-        "_id": 4,
+        // "_id": 4,
         "title": "Cherry cheesecake",
-        "img": "/img/cherryCheesecake.jpg",
+        "imageUrl": "/img/cherryCheesecake.jpg",
         "ingredients": [
             "1 (14 ounce) can sweetened condensed milk",
             "1 (8 ounce) package cream cheese, softened",
@@ -105,13 +105,13 @@ export const jsonInitialStore = [
             "Pour cherry pie filling on top of pie; serve.",
             "Source: https://www.allrecipes.com/recipe/8173/cherry-cheesecake/"
         ],
-        "comments": [],
-        "ownerId": "reneta"
+        // "comments": [],
+        // "ownerId": "reneta"
     },
     {
-        "_id": 5,
+        // "_id": 5,
         "title": "Chocolate cherry cheesecake",
-        "img": "/img/chocCherry.jpg",
+        "imageUrl": "/img/chocCherry.jpg",
         "ingredients": [
             "Crust",
             "30 Oreos or chocolate sandwich cookies, filling discarded",
@@ -150,13 +150,13 @@ export const jsonInitialStore = [
             " Serve slices of the cheesecake with the cherry sauce.",
             "Source: https://curlygirlkitchen.com/chocolate-cherry-cheesecake-no-bake/"
         ],
-        "comments": [],
-        "ownerId": "reneta"
+        // "comments": [],
+        // "ownerId": "reneta"
     },
     {
-        "_id": 6,
+        // "_id": 6,
         "title": "Cherry muffins",
-        "img": "/img/cherryMuffins.jpg",
+        "imageUrl": "/img/cherryMuffins.jpg",
         "ingredients": [
             "1/2 teaspoon kosher salt",
             "1 tablespoon baking powder",
@@ -180,14 +180,7 @@ export const jsonInitialStore = [
             "Bake for 15 to 20 minutes or until an inserted toothpick comes out clean. Let the muffins cool for 10 to 15 minutes before serving.",
             "Source: https://curlygirlkitchen.com/chocolate-cherry-cheesecake-no-bake/"
         ],
-        "comments": [],
-        "ownerId": "reneta"
+        // "comments": [],
+        // "ownerId": "reneta"
     }
 ];
-
-// export function onStartInitalData(isStarted, setIsStarted){
-//     if(!isStarted) {
-//         setIsStarted(true);
-//         return jsonInitialStorel;
-//     }
-// }
