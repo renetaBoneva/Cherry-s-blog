@@ -42,6 +42,7 @@ export function requestFactory(token) {
         get: requester.bind(null, "GET", token),
         post: requester.bind(null, "POST", token),
         put: requester.bind(null, "PUT", token),
+        patch: requester.bind(null, "PATCH", token),
         del: requester.bind(null, "DELETE", token)
     }
 }

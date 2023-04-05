@@ -28,9 +28,23 @@ export function RecipesProvider({ children }) {
     }, [])
 
     async function createRecipeHandler(data) {
+        data = prepareData(data);
         let result = await recipesService.create(data);
         result = result.result;
         setRecipesData(state => ({ ...state, result }))
+        navigate('/catalog')
+    }
+
+    async function editRecipeHandler(data) {
+        const id = data._id;
+        data = prepareData(data);
+        try {
+            let result = await recipesService.edit(id, data);
+            setRecipesData(state => state.map(r => r._id === id ? result : r));
+        } catch (err) {
+            console.log(err.message);
+        }
+        navigate(`/recipes/${id}/details`);
     }
 
     async function deleteRecipeHandler(data) {
@@ -42,6 +56,7 @@ export function RecipesProvider({ children }) {
         catch (err) {
             console.log(err.message);
         }
+        navigate('/catalog');
     }
 
     async function onCommentSubmit(comment) {
@@ -54,7 +69,8 @@ export function RecipesProvider({ children }) {
         setRecipesData,
         createRecipeHandler,
         onCommentSubmit,
-        deleteRecipeHandler
+        deleteRecipeHandler,
+        editRecipeHandler
     };
 
     return (
@@ -64,4 +80,10 @@ export function RecipesProvider({ children }) {
             </RecipeContext.Provider>
         </>
     )
+}
+
+function prepareData(data) {    
+    data.method = data.method.split('\n');
+    data.ingredients = data.ingredients.split('\n');
+    return data;
 }

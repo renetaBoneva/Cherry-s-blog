@@ -22,16 +22,20 @@ export function recipesServiceFactory(token) {
         return request.post(baseURL, data);
     }   
 
+    function edit( id, newData) {
+        return request.put(`${baseURL}/${id}`, newData);
+    }
+
     function del(recipeId) {
         return request.del(`${baseURL}/${recipeId}`);
     }    
-
 
     return {
         getAll,
         getOne,
         getCherryCake,
         create,
+        edit,
         del
     }
 }

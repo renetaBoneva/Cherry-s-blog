@@ -86,7 +86,7 @@ export function RecipeDetails() {
                             </div>
                         </div>
 
-                        <form id="newCommentForm" onSubmit={onSubmitClick}>
+                        <form method="POST" id="newCommentForm" onSubmit={onSubmitClick}>
                             <textarea
                                 placeholder="Add new comment..."
                                 name="commentValue"

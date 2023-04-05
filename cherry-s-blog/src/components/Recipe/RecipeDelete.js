@@ -29,7 +29,7 @@ export function RecipeDelete() {
     return (
         <main>
             <section id="deleteRecipeSection" className="wrapper">
-                <form onSubmit={onSubmitClick}>
+                <form method="POST" onSubmit={onSubmitClick}>
                     <h2>Delete recipe</h2>
                     <label htmlFor="title">Title: </label>
                     <input
