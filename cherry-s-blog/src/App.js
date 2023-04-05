@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { AuthProvider } from "./contexts/AuthContext";
@@ -37,9 +36,9 @@ function App() {
           <Route path="/users/:userId/profile" element={<UserProfilePage />}></Route>
           <Route path="/users/:userId/edit" element={<UserProfileEdit />}></Route>
 
-          <Route path="/recipes/:id/details" element={<RecipeDetails />}></Route>
-          <Route path="/recipes/:id/delete" element={<RecipeDelete />}></Route>
-          <Route path="/recipes/:id/edit" element={<RecipeEdit />}></Route>
+          <Route path="/recipes/:recipeId/details" element={<RecipeDetails />}></Route>
+          <Route path="/recipes/:recipeId/delete" element={<RecipeDelete />}></Route>
+          <Route path="/recipes/:recipeId/edit" element={<RecipeEdit />}></Route>
 
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>

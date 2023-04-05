@@ -1,43 +1,47 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { RecipeContext } from "../../contexts/RecipesContext";
+import { useForm } from "../../hooks/useForm";
+import { useService } from "../../hooks/useService";
+import { recipesServiceFactory } from "../../services/recipesService";
 
 export function RecipeDetails() {
-    const [comForm, setComForm] = useState({
-        username: "reneta",
-        commentValue: ""
-    })
     document.body.style.backgroundImage = `none`;
-    document.body.style.backgroundColor= '#C6CACB';
+    document.body.style.backgroundColor = '#C6CACB';
 
-    console.log("//TODO get recipe details");
+    const { recipeId } = useParams();
+    const [currentRecipe, setCurrentRecipe] = useState({});
+    const recipeService = useService(recipesServiceFactory);
+    const { onCommentSubmit } = useContext(RecipeContext);
+    const { values, changeValues, onSubmitClick } = useForm({
+        comment: ""
+    }, onCommentSubmit)
+
+    useEffect(() => {
+        recipeService.getOne(recipeId)
+            .then(res => setCurrentRecipe(res))
+            .catch(err => console.log(err.message))
+    }, [recipeId])
+
     console.log("//TODO get comments");
-   
-    function onComChange(e) {
-        setComForm(state => ({...state, [e.target.name]: e.target.value}))
-    }
-
-    function onCommentSubmit(e) {
-        e.preventDefault();
-        console.log(comForm);
-        console.log("//TODO send post request to the server.");
-    }
+    const ingredients = currentRecipe.ingredients;
+    const method = currentRecipe.method;
 
     return (
-
         <main>
             <section id="detailsSection">
                 <div className="wrapper">
                     <div id="recipeHeader">
                         <div id="imgDiv">
-                            <img src="/img/cherryCake.jpg" alt="cherryCake"/>
+                            <img src={currentRecipe.imageUrl} alt="cherryCake" />
                         </div>
                         <div id="nameDiv">
-                            <h2>Cherry cake</h2>
+                            <h2>{currentRecipe.title}</h2>
                             <div id="iconsDiv">
-                                <Link to={"/recipes/id/edit"}>
+                                <Link to={`/recipes/${currentRecipe._id}/edit`}>
                                     <i className="bi bi-pencil-fill"></i>
                                 </Link>
-                                <Link to={"/recipes/id/delete"}>
+                                <Link to={`/recipes/${currentRecipe._id}/delete`}>
                                     <i className="bi bi-trash"></i>
                                 </Link>
                             </div>
@@ -48,26 +52,23 @@ export function RecipeDetails() {
                         <div id="ingredientsDiv">
                             <h3>Ingredients</h3>
                             <p>
-                                200g soft unsalted butter,plus extra for the tin<br />
-                                200g golden caster sugar<br />
-                                4 eggs<br />
-                                2 tsp vanilla extract<br />
-                                1 tsp almond extract (optional)<br />
-                                75g glacé cherries, patted dry if in syrup, then quartered<br />
-                                175g self-raising flour<br />
-                                50g ground almonds<br />
-                                ½ tsp baking powder<br />
+                                {ingredients?.map((item, index) => (
+                                    <React.Fragment key={index}>
+                                        {item}
+                                        {index !== ingredients.length - 1 && <br />}
+                                    </React.Fragment>
+                                ))}
                             </p>
                         </div>
                         <div id="methodsDiv">
                             <h3>Method</h3>
                             <p>
-                                STEP 1<br />
-                                Heat the oven to 180C/160C fan/gas 4. Butter a 900g loaf tin and line with baking parchment. Beat the butter and sugar together until pale and fluffy, then beat in the eggs one at a time, followed by the vanilla and almond extract (if using).<br />
-                                STEP 2<br />
-                                Toss the cherries with 2 tbsp of the flour in a bowl. Tip the rest of the flour, the ground almonds, baking powder and a pinch of salt into the bowl with the sugar and eggs, and mix until just combined. Fold in the cherries and any remaining flour in the bowl. Spoon into the prepared tin and smooth over the top.<br />
-                                STEP 3<br />
-                                Bake for 50-55 mins, or until a skewer inserted in the middle comes out clean. Leave to cool for 10 mins in the tin, then transfer to a wire rack to cool completely. Serve as it is, or mix the icing sugar with the extract and enough milk to make a thick but pourable consistency. Drizzle over the loaf cake, and scatter over the flaked almonds to serve.
+                                {method?.map((item, index) => (
+                                    <React.Fragment key={index}>
+                                        {item}
+                                        {index !== method.length - 1 && <br />}
+                                    </React.Fragment>
+                                ))}
                             </p>
 
                         </div>
@@ -85,8 +86,13 @@ export function RecipeDetails() {
                             </div>
                         </div>
 
-                        <form id="newCommentForm" onSubmit={onCommentSubmit}>
-                            <textarea placeholder="Add new comment..." name="commentValue" value={comForm.commentValue} onChange={onComChange} ></textarea>
+                        <form id="newCommentForm" onSubmit={onSubmitClick}>
+                            <textarea
+                                placeholder="Add new comment..."
+                                name="commentValue"
+                                value={values.comment}
+                                onChange={changeValues}
+                            ></textarea>
                             <button><i className="bi bi-send-fill"></i></button>
                         </form>
                     </div>

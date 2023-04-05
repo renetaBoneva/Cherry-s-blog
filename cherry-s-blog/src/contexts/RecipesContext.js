@@ -33,10 +33,15 @@ const [recipesData, setRecipesData] = useState({});
         setRecipesData(state => ({ ...state, result }))
     }
 
+    async function onCommentSubmit(comment) {
+        console.log(comment);
+    }
+
     const context = {
         recipesData,
         setRecipesData,
         createRecipeHandler,
+        onCommentSubmit
     };
 
     return (

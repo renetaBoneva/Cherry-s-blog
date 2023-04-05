@@ -1,5 +1,3 @@
-import { useService } from "../../hooks/useService";
-import { recipesServiceFactory } from "../../services/recipesService";
 import { CatalogSection } from "../Catalog/CatalogSection";
 import { Home } from "./Home";
 

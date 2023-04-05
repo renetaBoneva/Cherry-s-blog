@@ -9,6 +9,10 @@ export function recipesServiceFactory(token) {
         return request.get(baseURL);
     }
 
+    function getOne(recipeId) {
+        return request.get(`${baseURL}/${recipeId}`);
+    }
+
     function getCherryCake() {
         const query = encodeURIComponent('title="Cherry cake"');
         return request.get(`${baseURL}?where=${query}`);
@@ -20,6 +24,7 @@ export function recipesServiceFactory(token) {
 
     return {
         getAll,
+        getOne,
         getCherryCake,
         create,
     }
