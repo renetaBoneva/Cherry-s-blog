@@ -1,13 +1,16 @@
+import { useContext } from "react";
 import { useForm } from "../../hooks/useForm";
+import { RecipeContext } from "../../contexts/RecipesContext";
 
-export function AddRecipePage() {
+export function AddRecipe() {
     document.body.style.backgroundImage = `url('/img/greenPinkBgr.png')`;
-    const {values, chnageValues, onSubmitClick} = useForm({
-            title: "",
-            imageUrl: "",
-            ingredients: "",
-            method: ""
-        }, (values) => console.log(values));
+    const { createRecipeHandler } = useContext(RecipeContext);
+    const { values, changeValues, onSubmitClick } = useForm({
+        title: "",
+        imageUrl: "",
+        ingredients: "",
+        method: ""
+    }, createRecipeHandler);
 
     return (
         <main style={{
@@ -23,14 +26,14 @@ export function AddRecipePage() {
                         type="text"
                         name="title"
                         value={values.title}
-                        onChange={chnageValues}
+                        onChange={changeValues}
                     />
                     <label htmlFor="imageUrl">Image: </label>
                     <input
                         type="text"
                         name="imageUrl"
                         value={values.imageUrl}
-                        onChange={chnageValues}
+                        onChange={changeValues}
                     />
                     <label htmlFor="ingredients">Ingredients: </label>
                     <textarea
@@ -38,15 +41,15 @@ export function AddRecipePage() {
                         rows="5"
                         name="ingredients"
                         value={values.ingredients}
-                        onChange={chnageValues}
+                        onChange={changeValues}
                     ></textarea>
-                   <label htmlFor="method">Method: </label>
+                    <label htmlFor="method">Method: </label>
                     <textarea
                         type="text"
                         rows="5"
                         name="method"
                         value={values.method}
-                        onChange={chnageValues}
+                        onChange={changeValues}
                     ></textarea>
 
                     <input type="submit" value="ADD" />
