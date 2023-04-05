@@ -10,8 +10,8 @@ import { AddRecipe } from "./components/Recipe/AddRecipe";
 import { UserProfilePage } from "./components/User/Profile/UserProfilePage";
 import { ErrorPage } from "./components/ErrorPage";
 import { Footer } from "./components/Footer/Footer";
-import { RecipeDetails } from "./components/Recipe/RecipeDetails";
 import { RecipeDelete } from "./components/Recipe/RecipeDelete";
+import { RecipeDetails } from "./components/Recipe/Details/RecipeDetails";
 import { RecipeEdit } from "./components/Recipe/RecipeEdit";
 import { UserProfileEdit } from "./components/User/Profile/UserProfileEdit";
 import { Logout } from "./components/User/Logout";
@@ -23,26 +23,26 @@ function App() {
   return (
     <AuthProvider>
       <RecipesProvider>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<HomeAndCatalogPage />}></Route>
-          <Route path="/catalog" element={<HomeAndCatalogPage />}></Route>
-          <Route path="/initialData" element={<InitialData />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/logout" element={<Logout />}></Route>
-          <Route path="/register" element={<Register />}></Route>
-          <Route path="/addRecipe" element={<AddRecipe />}></Route>
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<HomeAndCatalogPage />}></Route>
+            <Route path="/catalog" element={<HomeAndCatalogPage />}></Route>
+            <Route path="/initialData" element={<InitialData />}></Route>
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/logout" element={<Logout />}></Route>
+            <Route path="/register" element={<Register />}></Route>
+            <Route path="/addRecipe" element={<AddRecipe />}></Route>
 
-          <Route path="/users/:userId/profile" element={<UserProfilePage />}></Route>
-          <Route path="/users/:userId/edit" element={<UserProfileEdit />}></Route>
+            <Route path="/users/:userId/profile" element={<UserProfilePage />}></Route>
+            <Route path="/users/:userId/edit" element={<UserProfileEdit />}></Route>
 
-          <Route path="/recipes/:recipeId/details" element={<RecipeDetails />}></Route>
-          <Route path="/recipes/:recipeId/delete" element={<RecipeDelete />}></Route>
-          <Route path="/recipes/:recipeId/edit" element={<RecipeEdit />}></Route>
+            <Route path="/recipes/:recipeId/details" element={<RecipeDetails />}></Route>
+            <Route path="/recipes/:recipeId/delete" element={<RecipeDelete />}></Route>
+            <Route path="/recipes/:recipeId/edit" element={<RecipeEdit />}></Route>
 
-          <Route path="*" element={<ErrorPage />}></Route>
-        </Routes>
-        <Footer />
+            <Route path="*" element={<ErrorPage />}></Route>
+          </Routes>
+          <Footer />
       </RecipesProvider>
     </AuthProvider>
   );

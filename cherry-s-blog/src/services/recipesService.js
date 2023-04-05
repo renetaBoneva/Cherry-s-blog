@@ -1,6 +1,6 @@
 import { requestFactory } from "./requester"
 
-const baseURL = "http://localhost:3030/data/recipes"
+const baseURL = "http://localhost:3030/data/recipes";
 
 export function recipesServiceFactory(token) {
     const request = requestFactory(token);

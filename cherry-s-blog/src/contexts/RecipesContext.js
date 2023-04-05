@@ -31,7 +31,7 @@ export function RecipesProvider({ children }) {
         data = prepareData(data);
         let result = await recipesService.create(data);
         result = result.result;
-        setRecipesData(state => ({ ...state, result }))
+        setRecipesData(state => ([ ...state, result ]))
         navigate('/catalog')
     }
 
@@ -59,16 +59,11 @@ export function RecipesProvider({ children }) {
         navigate('/catalog');
     }
 
-    async function onCommentSubmit(comment) {
-        console.log('//TODO handle comments');
-        console.log(comment);
-    }
 
     const context = {
         recipesData,
         setRecipesData,
         createRecipeHandler,
-        onCommentSubmit,
         deleteRecipeHandler,
         editRecipeHandler
     };

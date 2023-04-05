@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { RecipeContext } from "../../contexts/RecipesContext";
-import { useForm } from "../../hooks/useForm";
-import { useService } from "../../hooks/useService";
-import { recipesServiceFactory } from "../../services/recipesService";
-import { AuthContext } from "../../contexts/AuthContext";
+
+import { useService } from "../../../hooks/useService";
+import { recipesServiceFactory } from "../../../services/recipesService";
+import { AuthContext } from "../../../contexts/AuthContext";
+
+import { Comments } from "./Comments/Comments";
 
 export function RecipeDetails() {
     document.body.style.backgroundImage = `none`;
@@ -12,13 +13,11 @@ export function RecipeDetails() {
 
     const { recipeId } = useParams();
     const [currentRecipe, setCurrentRecipe] = useState({});
-    const recipeService = useService(recipesServiceFactory);
-    const { onCommentSubmit } = useContext(RecipeContext);
     const { userId } = useContext(AuthContext);
+
+    const recipeService = useService(recipesServiceFactory);
+
     const isOwner = userId === currentRecipe._ownerId;
-    const { values, changeValues, onSubmitClick } = useForm({
-        comment: ""
-    }, onCommentSubmit)
 
     useEffect(() => {
         recipeService.getOne(recipeId)
@@ -26,9 +25,9 @@ export function RecipeDetails() {
             .catch(err => console.log(err.message))
     }, [recipeId])
 
-    console.log("//TODO get comments");
     const ingredients = currentRecipe.ingredients;
     const method = currentRecipe.method;
+
 
     return (
         <main>
@@ -77,29 +76,7 @@ export function RecipeDetails() {
 
                         </div>
                     </div>
-                    <div id="comments">
-                        <h3>Comments</h3>
-
-                        <div className="comment">
-                            <div className="imgPlace">
-                                <i className="bi bi-person-fill"></i>
-                            </div>
-                            <div className="comPlace">
-                                <p className="name">Lili Semizova</p>
-                                <p className="content">That’s my favorite cake to cook! </p>
-                            </div>
-                        </div>
-
-                        <form method="POST" id="newCommentForm" onSubmit={onSubmitClick}>
-                            <textarea
-                                placeholder="Add new comment..."
-                                name="commentValue"
-                                value={values.comment}
-                                onChange={changeValues}
-                            ></textarea>
-                            <button><i className="bi bi-send-fill"></i></button>
-                        </form>
-                    </div>
+                    <Comments recipeId={recipeId} />
 
                 </div>
             </section>
