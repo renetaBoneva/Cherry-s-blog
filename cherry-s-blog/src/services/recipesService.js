@@ -9,12 +9,18 @@ export function recipesServiceFactory(token) {
         return request.get(baseURL);
     }
 
+    function getCherryCake() {
+        const query = encodeURIComponent('title="Cherry cake"');
+        return request.get(`${baseURL}?where=${query}`);
+    }
+
     function create(data) {
         return request.post(baseURL, data);
     }    
 
     return {
         getAll,
+        getCherryCake,
         create,
     }
 }
