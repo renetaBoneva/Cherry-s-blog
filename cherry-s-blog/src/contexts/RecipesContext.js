@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export const RecipeContext = createContext();
 
 export function RecipesProvider({ children }) {
-    const [recipesData, setRecipesData] = useState({});
+    const [recipesData, setRecipesData] = useState([]);
     const navigate = useNavigate();
     const recipesService = useService(recipesServiceFactory);
 
@@ -31,7 +31,11 @@ export function RecipesProvider({ children }) {
         data = prepareData(data);
         let result = await recipesService.create(data);
         result = result.result;
+
+        // console.log('result -> ' + result);
+        console.log('recipesData before -> ' + recipesData);
         setRecipesData(state => ([ ...state, result ]))
+        // console.log('recipesData after -> ' + recipesData);
         navigate('/catalog')
     }
 
@@ -77,7 +81,7 @@ export function RecipesProvider({ children }) {
     )
 }
 
-function prepareData(data) {    
+function prepareData(data) {  
     data.method = data.method.split('\n');
     data.ingredients = data.ingredients.split('\n');
     return data;

@@ -13,7 +13,7 @@ export function RecipeDetails() {
 
     const { recipeId } = useParams();
     const [currentRecipe, setCurrentRecipe] = useState({});
-    const { userId } = useContext(AuthContext);
+    const { userId, isAuthenticated } = useContext(AuthContext);
 
     const recipeService = useService(recipesServiceFactory);
 
@@ -76,7 +76,7 @@ export function RecipeDetails() {
 
                         </div>
                     </div>
-                    <Comments recipeId={recipeId} />
+                    <Comments recipeId={recipeId} isAuthenticated={isAuthenticated} />
 
                 </div>
             </section>

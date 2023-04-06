@@ -109,6 +109,12 @@
 }
 
 .comment {	
+	font-family: 'Philosopher';
+	font-style: normal;	
+	font-size: 36px;
+	line-height: 40px;
+	color: #15491B;
+
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;

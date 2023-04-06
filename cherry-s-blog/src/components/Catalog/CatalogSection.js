@@ -13,7 +13,7 @@ export function CatalogSection() {
         {recipesData.length > 0
           ? (
             <div id="recipesWrapper">
-              {recipesData.map(recipe => <RecipeTemplateCatalog key={recipe._id} {...recipe} />)}
+              {recipesData?.map(recipe => <RecipeTemplateCatalog key={recipe._id} {...recipe} />)}
             </div>
           )
           : (

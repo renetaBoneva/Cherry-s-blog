@@ -78,12 +78,12 @@ export function UserProfileEdit() {
                     />
                     <label htmlFor="level" >Level: </label>
                     <select name="level" value={values.level} onChange={changeValues}>
-                        <option value={"Beginner"}>Beginner</option>
-                        <option value={"Middle"}>Middle</option>
-                        <option value={"Advanced"}>Advanced</option>
+                        <option value={"Beginner"} >Beginner</option>
+                        <option value={"Middle"} >Middle</option>
+                        <option value={"Advanced"} >Advanced</option>
                     </select>
 
-                    <input type="submit" value="EDIT" />
+                    <input type="submit" value="EDIT"/>
                 </form>
             </section>
 
