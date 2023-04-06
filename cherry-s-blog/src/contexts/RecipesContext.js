@@ -30,12 +30,12 @@ export function RecipesProvider({ children }) {
     async function createRecipeHandler(data) {
         data = prepareData(data);
         let result = await recipesService.create(data);
-        result = result.result;
 
-        // console.log('result -> ' + result);
-        console.log('recipesData before -> ' + recipesData);
+        // result = result.result;
+
+        console.log(result);
         setRecipesData(state => ([ ...state, result ]))
-        // console.log('recipesData after -> ' + recipesData);
+        
         navigate('/catalog')
     }
 

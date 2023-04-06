@@ -15,7 +15,13 @@ export function recipesServiceFactory(token) {
 
     function getCherryCake() {
         const query = encodeURIComponent('title="Cherry cake"');
+        return request.get(`${baseURL}?load=${query}`);
+    }
+
+    function getUsersRecipes(_id) {
+        const query = encodeURIComponent(`_ownerId="${_id}"`);
         return request.get(`${baseURL}?where=${query}`);
+
     }
 
     function create(data) {
@@ -34,6 +40,7 @@ export function recipesServiceFactory(token) {
         getAll,
         getOne,
         getCherryCake,
+        getUsersRecipes,
         create,
         edit,
         del

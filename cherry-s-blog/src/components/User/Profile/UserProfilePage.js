@@ -1,14 +1,25 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import { AuthContext } from "../../../contexts/AuthContext";
+import { useService } from "../../../hooks/useService"
+import { recipesServiceFactory } from "../../../services/recipesService";
+import { CatalogSection } from "../../Catalog/CatalogSection";
 
 export function UserProfilePage() {
     document.body.style.backgroundImage = `none`;
     document.body.style.backgroundColor = '#E78DBD';
 
-    const { auth } = useContext(AuthContext);
+    const [recipesArr, setRecipesArr] = useState([]);
+    const { auth, userId } = useContext(AuthContext);
+    const recipeService = useService(recipesServiceFactory);
 
-    console.log("//TODO Add user's recipes");
+    useEffect(() => {
+        recipeService.getUsersRecipes(userId)
+            .then(res => setRecipesArr(res))
+            .catch(err => console.log(err.message))
+    }, [userId])
+
     return (
         <main style={{
             display: "flex",
@@ -53,21 +64,7 @@ export function UserProfilePage() {
                 </div>
                 <div id="yourRecipes">
                     <h2>Your recipes</h2>
-
-                    <div id="recipesWrapper">
-                        <div className="recipe">
-                            <img src="/img/cherryCake.jpg" alt="cherryCake" />
-                            <h3><Link to={"/recipes/"}>Cherry cake</Link></h3>
-                        </div>
-                        <div className="recipe">
-                            <img src="/img/cherryPie.jpg" alt="cherryPie" />
-                            <h3><Link to={"/recipes/"}>Cherry pie</Link></h3>
-                        </div>
-                        <div className="recipe">
-                            <img src="/img/chocCherry.jpg" alt="chocCherry" />
-                            <h3><Link to={"/recipes/"}>Chocolate cherry cheesecake</Link></h3>
-                        </div>
-                    </div>
+                    <CatalogSection recipesArr={recipesArr} />
                 </div>
 
             </section>

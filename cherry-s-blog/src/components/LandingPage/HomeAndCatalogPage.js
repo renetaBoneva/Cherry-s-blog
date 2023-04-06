@@ -8,7 +8,14 @@ export function HomeAndCatalogPage() {
     return (
         <main>
             <Home />
-            <CatalogSection />
+            <section id="catalogSection">
+
+                <div className="wrapper">
+                    <h2>Catalog</h2>
+                    <CatalogSection />
+                </div>
+
+            </section>
         </main>
     );
 }
