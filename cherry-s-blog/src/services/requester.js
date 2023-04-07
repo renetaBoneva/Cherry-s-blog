@@ -1,3 +1,5 @@
+import { logDOM } from "@testing-library/react";
+
 async function requester(method, token, url, data) {
     let options = {};
     if (method !== "GET") {
@@ -9,14 +11,18 @@ async function requester(method, token, url, data) {
             options.body = JSON.stringify(data);
         }
     }
-    
-    if (token) {
-        options.headers = {
-            ...options.headers,
-            "X-Authorization": token
+
+    const serializedToken = localStorage.getItem('auth');
+    if (serializedToken) {
+        const auth = JSON.parse(serializedToken);
+        if (auth.accessToken) {
+            options.headers = {
+                ...options.headers,
+                "X-Authorization": auth.accessToken
+            }
         }
     }
-    
+
     const res = await fetch(url, options);
     if (res.status === 204) {
         return {}
@@ -30,14 +36,6 @@ async function requester(method, token, url, data) {
 }
 
 export function requestFactory(token) {
-    if (!token) {
-        const serializedToken = localStorage.getItem('auth');
-        if (serializedToken) {
-            const auth = JSON.parse(serializedToken);
-            token = auth.accessToken;
-        }
-    }
-
     return {
         get: requester.bind(null, "GET", token),
         post: requester.bind(null, "POST", token),
