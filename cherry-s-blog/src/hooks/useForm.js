@@ -10,8 +10,8 @@ export function useForm(initialData, submitHandler){
 
     function onSubmitClick(e) {
         e.preventDefault();
-
         submitHandler(values);
+        setValues(initialData);
     }
 
     function editValues(newValues) {
