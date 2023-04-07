@@ -10,15 +10,16 @@ export function InitialData() {
         isAuthenticated,
         onLoginHandler,
         onLogoutHandler } = useContext(AuthContext);
-    const { createRecipeHandler } = useContext(RecipeContext);
+    const { createRecipeHandler  } = useContext(RecipeContext);
 
     if (isAuthenticated) {
         jsonInitialStore.map(createRecipeHandler);
     } else {
-        // onLoginHandler({ email: "peter@abv.bg", password: "123456" })
-        //     .then(res => {
-        //         jsonInitialStore.map(createRecipeHandler)
-        //     })
+        onLoginHandler({ email: "peter@abv.bg", password: "123456" })
+            .then(res => {
+                jsonInitialStore.map(createRecipeHandler)
+            })
+            .then(onLogoutHandler)
     }
 
     return (
