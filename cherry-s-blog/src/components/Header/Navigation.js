@@ -21,17 +21,17 @@ export function Navigation() {
                         <li><Link to="/catalog">Catalog</Link></li>
                         {isAuthenticated ? (
                             <>
-                            {/* <!-- Logged in user menu --> */}
-                            <li><Link to="/addRecipe">Add recipe</Link></li>
-                            <li><Link to={`/users/${userId}/profile`}>My profile</Link></li>
-                            <li><Link to="/logout">Logout</Link></li>
+                                {/* <!-- Logged in user menu --> */}
+                                <li><Link to="/addRecipe">Add recipe</Link></li>
+                                <li><Link to={`/users/${userId}/profile`}>My profile</Link></li>
+                                <li><Link to="/logout">Logout</Link></li>
                             </>
-                        ) : ( 
-                            <>                          
-                            {/* <!-- Guest menu --> */}
-                            <li><Link to="/login">Login</Link></li>
-                            <li><Link to="/register">Register</Link></li>
-                            </> 
+                        ) : (
+                            <>
+                                {/* <!-- Guest menu --> */}
+                                <li><Link to="/login">Login</Link></li>
+                                <li><Link to="/register">Register</Link></li>
+                            </>
                         )}
                     </ul>
                 </div>
