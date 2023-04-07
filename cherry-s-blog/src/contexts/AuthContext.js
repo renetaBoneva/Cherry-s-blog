@@ -69,6 +69,7 @@ export function AuthProvider({ children }) {
         onLogoutHandler,
         getDetails,
         EditUserProfile,
+        setAuth
     }
 
     return (
