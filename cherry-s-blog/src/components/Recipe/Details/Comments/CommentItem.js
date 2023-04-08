@@ -1,13 +1,16 @@
 export function CommentItem({
     comment,
-    auth
+    auth,
+    editedOwnerInfo
 }) {
     return (
         <div className="comment">
-            {auth.imageUrl && auth.imageUrl !== ""
+            {(auth.imageUrl && auth.imageUrl !== "") || (editedOwnerInfo?.imageUrl && editedOwnerInfo?.imageUrl !== "")
                 ? (
                     <div className="imgPlace" style={{
-                        backgroundImage: `url("${auth.imageUrl}")`,
+                        backgroundImage: `url("${(editedOwnerInfo && editedOwnerInfo?.imageUrl)
+                            ? editedOwnerInfo?.imageUrl
+                            : auth.imageUrl}")`,
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat"
                     }}>
@@ -18,7 +21,9 @@ export function CommentItem({
                     </div>
                 )}
             <div className="comPlace">
-                <p className="name">{auth.username ? auth.username : "User"}</p>
+                <p className="name">{(editedOwnerInfo && editedOwnerInfo?.username)
+                    ? editedOwnerInfo?.username
+                    : ((auth.username) ? auth.username : auth.email)}</p>
                 <p className="content">{comment}</p>
             </div>
         </div>

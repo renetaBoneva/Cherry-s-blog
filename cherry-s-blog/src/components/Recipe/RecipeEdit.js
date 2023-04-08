@@ -11,13 +11,19 @@ export function RecipeEdit() {
     const { recipeId } = useParams();
     const { editRecipeHandler } = useContext(RecipeContext);
     const recipeService = useService(recipesServiceFactory)
-    const { values, changeValues, onSubmitClick, editValues } = useForm({
-        _id: recipeId,
-        title: "",
-        imageUrl: "",
-        ingredients: "",
-        method: ""
-    }, editRecipeHandler);
+    const { values,
+        changeValues,
+        onSubmitClick,
+        validateData,
+        isValid,
+        isDisabled,
+        editValues } = useForm({
+            _id: recipeId,
+            title: "",
+            imageUrl: "",
+            ingredients: "",
+            method: ""
+        }, editRecipeHandler);
 
     useEffect(() => {
         recipeService.getOne(recipeId)
@@ -45,14 +51,20 @@ export function RecipeEdit() {
                         name="title"
                         value={values.title}
                         onChange={changeValues}
+                        onBlur={validateData}
                     />
+                    {isValid.title && isValid.title !== "" && <p className="errParagraph">{isValid.title}</p>}
+
                     <label htmlFor="imageUrl">Image: </label>
                     <input
                         type="text"
                         name="imageUrl"
                         value={values.imageUrl}
                         onChange={changeValues}
+                        onBlur={validateData}
                     />
+                    {isValid.imageUrl && isValid.imageUrl !== "" && <p className="errParagraph">{isValid.imageUrl}</p>}
+
                     <label htmlFor="ingredients">Ingredients: </label>
                     <textarea
                         type="text"
@@ -60,7 +72,10 @@ export function RecipeEdit() {
                         rows="5"
                         value={values.ingredients}
                         onChange={changeValues}
+                        onBlur={validateData}
                     ></textarea>
+                    {isValid.ingredients && isValid.ingredients !== "" && <p className="errParagraph">{isValid.ingredients}</p>}
+
 
                     <label htmlFor="method">Method: </label>
                     <textarea
@@ -69,8 +84,11 @@ export function RecipeEdit() {
                         rows="5"
                         value={values.method}
                         onChange={changeValues}
-                    ></textarea>
-                    <input type="submit" value="EDIT" />
+                        onBlur={validateData}
+                    ></textarea>                    
+                    {isValid.method && isValid.method !== "" && <p className="errParagraph">{isValid.method}</p>}
+
+                    <input type="submit" value="EDIT" disabled={isDisabled} />
                 </form>
             </section>
 

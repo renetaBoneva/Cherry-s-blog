@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useForm } from "../../../hooks/useForm";
 import { AuthContext } from "../../../contexts/AuthContext";
 
@@ -6,15 +6,21 @@ export function UserProfileEdit() {
     document.body.style.backgroundImage = `url('/img/yellowGreenBgr.png')`;
 
     const { getDetails, EditUserProfile } = useContext(AuthContext)
-    const { values, changeValues, onSubmitClick, editValues } = useForm({
-        username: "",
-        email: "",
-        password: "",
-        rePass: "",
-        location: "",
-        imageUrl: "",
-        level: ""
-    }, EditUserProfile)
+    const { values,
+        changeValues,
+        onSubmitClick,
+        validateData,
+        isValid,
+        isDisabled,
+        editValues } = useForm({
+            username: "",
+            email: "",
+            password: "",
+            rePass: "",
+            location: "",
+            imageUrl: "",
+            level: ""
+        }, EditUserProfile)
 
     useEffect(() => {
         getDetails()
@@ -23,7 +29,8 @@ export function UserProfileEdit() {
                 editValues(userData);
             })
     }, [])
-    
+
+
     return (
         <main style={{
             display: "flex",
@@ -39,51 +46,36 @@ export function UserProfileEdit() {
                         name="username"
                         value={values.username}
                         onChange={changeValues}
+                        onBlur={validateData}
                     />
-                    <label htmlFor="email">E-mail: </label>
-                    <input
-                        type="text"
-                        name="email"
-                        value={values.email}
-                        onChange={changeValues}
-                    />
-                    <label htmlFor="password">New password: </label>
-                    <input
-                        type="password"
-                        name="password"
-                        value={values.password}
-                        onChange={changeValues}
-                    />
-                    <label htmlFor="rePass">Repeat password: </label>
-                    <input
-                        type="password"
-                        name="rePass"
-                        value={values.rePass}
-                        onChange={changeValues}
-                    />
+                    {isValid.username && isValid.username !== "" && <p className="errParagraph">{isValid.username}</p>}
+
                     <label htmlFor="location">Location: </label>
                     <input
                         type="text"
                         name="location"
                         value={values.location}
                         onChange={changeValues}
+                        onBlur={validateData}
                     />
+                    {isValid.location && isValid.location !== "" && <p className="errParagraph">{isValid.location}</p>}
                     <label htmlFor="imageUrl">Image: </label>
                     <input
                         type="text"
                         name="imageUrl"
                         value={values.imageUrl}
                         onChange={changeValues}
-                        alt="profilePhoto"
+                        onBlur={validateData}
                     />
+                    {isValid.imageUrl && isValid.imageUrl !== "" && <p className="errParagraph">{isValid.imageUrl}</p>}
                     <label htmlFor="level" >Level: </label>
                     <select name="level" value={values.level} onChange={changeValues}>
-                        <option value={"Beginner"} >Beginner</option>
-                        <option value={"Middle"} >Middle</option>
-                        <option value={"Advanced"} >Advanced</option>
+                        <option value="Beginner" >Beginner</option>
+                        <option value="Middle" >Middle</option>
+                        <option value="Advanced" >Advanced</option>
                     </select>
 
-                    <input type="submit" value="EDIT"/>
+                    <input type="submit" value="EDIT" disabled={isDisabled} />
                 </form>
             </section>
 

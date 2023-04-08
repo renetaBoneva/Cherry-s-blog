@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { authServiceFactory } from "../services/authService";
+import { commentsServiceFactory } from "../services/commentsService";
 
 export const AuthContext = createContext();
 
@@ -12,6 +13,7 @@ export function AuthProvider({ children }) {
     const navigate = useNavigate();
 
     const authService = authServiceFactory(auth.accessToken);
+    const commentsService = commentsServiceFactory(auth.accessToken);
 
     async function onLoginHandler(loginData) {
         let result = auth;
@@ -52,6 +54,9 @@ export function AuthProvider({ children }) {
     async function EditUserProfile(data) {
         console.log('//TODO validate data');
         console.log('//TODO change server data');
+
+        // const userComments = await commentsService.getCommentsForUser(auth._id);
+        // userComments.map(commment => commentsService.patchCommentOwnerData(commment._id, data));
 
         const updatedAuth = {...auth, ...data};
         

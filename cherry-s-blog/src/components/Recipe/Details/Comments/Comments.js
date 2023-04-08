@@ -8,9 +8,10 @@ import { CommentItem } from "./CommentItem";
 import { AuthContext } from "../../../../contexts/AuthContext";
 
 export function Comments({ recipeId, isAuthenticated }) {
-    const commentsService = useService(commentsServiceFactory);
     const [comments, setComments] = useState([]);
-    const {auth} = useContext(AuthContext);
+    const [isValid, setIsValid] = useState(false);
+    const commentsService = useService(commentsServiceFactory);
+    const { auth } = useContext(AuthContext);
 
     useEffect(() => {
         commentsService.getCommentsForRecipe(recipeId)
@@ -33,7 +34,15 @@ export function Comments({ recipeId, isAuthenticated }) {
             console.log(err.message);
         }
     }
-    
+
+    function validateComment(data) {
+        if (data.length < 2) {
+            setIsValid(false)
+        } else {
+            setIsValid(true)
+        }
+    }
+
     return (
 
         <div id="comments">
@@ -46,7 +55,7 @@ export function Comments({ recipeId, isAuthenticated }) {
                     <div className="comment">
                         <p>No comments yet</p>
                     </div>
-                 )}
+                )}
 
 
             {isAuthenticated && <form method="POST" id="newCommentForm" onSubmit={onSubmitClick}>
@@ -54,10 +63,16 @@ export function Comments({ recipeId, isAuthenticated }) {
                     placeholder="Add new comment..."
                     name="comment"
                     value={values.comment}
-                    onChange={changeValues}
+                    onChange={(e) => {
+                        changeValues(e)
+                        validateComment(values.comment)
+                    }}
                 ></textarea>
-                <button><i className="bi bi-send-fill"></i></button>
+                <button disabled={!isValid} ><i className="bi bi-send-fill"></i></button>
             </form>}
+            {isAuthenticated && !isValid && (
+                <p style={{marginLeft: "32px"}}>*Comment must contain at least 1 symbol.</p>
+            )}
         </div>
     )
 }

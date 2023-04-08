@@ -13,6 +13,19 @@ export function commentsServiceFactory(token) {
         return result;
     }
 
+
+    async function getCommentsForUser(userId) {
+        const searchQuery = encodeURIComponent(`_ownerId="${userId}"`);
+
+        const result = await request.get(`${baseUrl}?where=${searchQuery}`);
+        return result;
+    }
+
+    async function patchCommentOwnerData(commentId, data) {
+        const result = await request.patch(`${baseUrl}/${commentId}`, { editedOwnerInfo: data });
+        return result;
+    }
+
     async function create(recipeId, data) {
         const result = await request.post(`${baseUrl}`, { recipeId, ...data })
         return result
@@ -20,6 +33,8 @@ export function commentsServiceFactory(token) {
 
     return {
         getCommentsForRecipe,
+        getCommentsForUser,
+        patchCommentOwnerData,
         create
     }
 }

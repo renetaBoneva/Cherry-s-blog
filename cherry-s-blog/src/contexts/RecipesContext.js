@@ -18,8 +18,6 @@ export function RecipesProvider({ children }) {
             })
             .catch((err) => {
                 if (err.message === "Resource not found") {
-                    setRecipesData({})
-                    console.log('//TODO logout');
                     navigate('/initialData')
                 } else {
                     console.log(err.message)
@@ -31,9 +29,6 @@ export function RecipesProvider({ children }) {
         data = prepareData(data);
         let result = await recipesService.create(data);
 
-        // result = result.result;
-
-        console.log(result);
         setRecipesData(state => ([ ...state, result ]))
         
         navigate('/catalog')

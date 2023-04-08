@@ -1,5 +1,3 @@
-import { logDOM } from "@testing-library/react";
-
 async function requester(method, token, url, data) {
     let options = {};
     if (method !== "GET") {
