@@ -21,10 +21,11 @@ async function requester(method, token, url, data) {
         }
     }
 
-    const res = await fetch(url, options);
+    let res = await fetch(url, options);
     if (res.status === 204) {
         return {}
     }
+
     const result = await res.json();
     if (!res.ok) {
         throw result;

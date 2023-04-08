@@ -11,7 +11,7 @@ export function RecipeDelete() {
     const { recipeId } = useParams();
     const {deleteRecipeHandler} = useContext(RecipeContext);
     const recipeService = useService(recipesServiceFactory)
-    const {values, changeValues, onSubmitClick, editValues} = useForm({
+    const {values, onSubmitClick, editValues} = useForm({
         _id: recipeId,
         title: "",
         imageUrl: "",

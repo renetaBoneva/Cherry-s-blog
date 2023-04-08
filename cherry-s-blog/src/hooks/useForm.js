@@ -4,6 +4,7 @@ import { useState } from "react"
 export function useForm(initialData, submitHandler) {
     const [values, setValues] = useState(initialData);
     const [isValid, setIsValid] = useState({});
+    const [isError, setIsError] = useState(false)
     const [isDisabled, setIsDisabled] = useState(false);
 
     function changeValues(e) {
@@ -12,8 +13,7 @@ export function useForm(initialData, submitHandler) {
 
     function onSubmitClick(e) {
         e.preventDefault();
-
-        submitHandler(values);
+        submitHandler(values, setIsError);
         setValues(initialData);
     }
 
@@ -78,12 +78,15 @@ export function useForm(initialData, submitHandler) {
             case "rePass":
                 if (e.target.value === "") {
                     errMessage = `Password is a must!`
+
+                    setIsDisabled(true)
                 } else if (e.target.value !== values.password || e.target.value !== values.rePass) {
                     passMatch = "Password missmatch!";
                     setIsDisabled(true)
                 } else {
                     passMatch = ""
                     errMessage = ""
+                    setIsDisabled(false);
                 }
                 break;
             case "email":
@@ -98,11 +101,7 @@ export function useForm(initialData, submitHandler) {
             default:
                 break;
         }
-        if (errMessage == "") {
-            setIsDisabled(false);
-        } else {
-            setIsDisabled(true)
-        }
+        
         setIsValid(state => (
             { ...state, [e.target.name]: errMessage, passMatch }))
     }
@@ -111,6 +110,7 @@ export function useForm(initialData, submitHandler) {
         values,
         changeValues,
         onSubmitClick,
+        isError,
         validateData,
         isValid,
         isDisabled,

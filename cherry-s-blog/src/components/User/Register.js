@@ -11,6 +11,7 @@ export function Register() {
 		changeValues,
 		onSubmitClick,
 		validateData,
+        isError,
 		isValid,
 		isDisabled, } = useForm({
 			username: "",
@@ -60,7 +61,7 @@ export function Register() {
 						onBlur={validateData}
 					/>
 					{isValid.password && isValid.password !== "" && <p className="errParagraph">{isValid.password}</p>}
-					
+
 					<label htmlFor="rePass">Repeat password: </label>
 					<input
 						type="password"
@@ -98,7 +99,9 @@ export function Register() {
 						<option value={"Middle"}>Middle</option>
 						<option value={"Advanced"}>Advanced</option>
 					</select>
-
+					{isError && (
+						<p className="errParagraph">{isError}</p>
+					)}
 					<input type="submit" value="REGISTER" disabled={isDisabled} />
 				</form>
 			</section>

@@ -6,8 +6,8 @@ import { useForm } from '../../hooks/useForm'
 export function Login() {
     document.body.style.backgroundImage = `url('/img/pinkYellowBgr.png')`;
 
-    const { onLoginHandler, auth } = useContext(AuthContext);
-    const {values, changeValues, onSubmitClick} = useForm({
+    const { onLoginHandler } = useContext(AuthContext);
+    const { values, changeValues, onSubmitClick, isError } = useForm({
         email: "",
         password: ""
     }, onLoginHandler)
@@ -34,6 +34,9 @@ export function Login() {
                         value={values.password}
                         onChange={changeValues}
                     />
+                    {isError && (
+                        <p className="errParagraph">{isError}</p>
+                    )}
                     <input type="submit" value="LOGIN" />
                 </form>
             </section>
