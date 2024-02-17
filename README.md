@@ -62,10 +62,11 @@ T
 ## Getting Started
 
 * Clone the repo from github.
-* Open integrated terminal on cherry-s-blog directory and run `npm install`.
+* Open integrated terminal on cherry-s-blog directory and run `npm install` and wait till the end of installation.
 * Change directory `cd ./server`.
-* Run `node server.js`.
-* Open new terminal 
+* Run `node server.js` to start the server.
+    It will run on http://localhost:3030/
+* Open new terminal for the front-end. 
 * Go back to cherry-s-blog directory `cd ../`.
 * Run `npm start` to start the application. 
 * Navigate to `http://localhost:3000/` and reload the page.
