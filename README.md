@@ -24,38 +24,45 @@ It's **blog** website for sweets where authorized and unauthorized users can vie
 
 - Navigation for logged users
 
-![navigation logged user img]()
+![navigation logged user img](https://github.com/renetaBoneva/Cherry-s-blog/blob/main/design/for%20README/nav-for-authorized.png)
 - Navigation for unlogged users
 
-![navigation unlogged user img]()
-### Landing page
+![navigation unlogged user img](https://github.com/renetaBoneva/Cherry-s-blog/blob/main/design/for%20README/nav-for-unauthorized.png)
+### Landing and catalog page
 
 
-![landing page img]()
+![landing page img](https://github.com/renetaBoneva/Cherry-s-blog/blob/main/design/for%20README/home-page.png)
 ### Login page
 
 
-![login page img]()
+![login page img](https://github.com/renetaBoneva/Cherry-s-blog/blob/main/design/for%20README/login-page.png)
 ### Register page
 
 
-![register page img]()
+![register page img](https://github.com/renetaBoneva/Cherry-s-blog/blob/main/design/for%20README/register-page.png)
 ### My profile page
-T
-
-**NOTE:** The practice server does not support user delete, so you will still be able to log in even after a successful deletion
-
-![my profile page img]()
-
-![my profile page img]()
-### Catalog page
 
 
-![catalog page img]()
+![my profile page img](https://github.com/renetaBoneva/Cherry-s-blog/blob/main/design/for%20README/my-profile-page.png)
+### Edit profile page
+
+![edit profile page img](https://github.com/renetaBoneva/Cherry-s-blog/blob/main/design/for%20README/edit-profile-page.png)
 ### Recipe details page
 
+For guests:
+![recipe details page img](https://github.com/renetaBoneva/Cherry-s-blog/blob/main/design/for%20README/details-for-guests.png)
+### Add recipe page
 
-![recipe details page img]()
+
+![add recipe page img](https://github.com/renetaBoneva/Cherry-s-blog/blob/main/design/for%20README/add-recipe-page.png)
+### Recipe edit page
+
+
+![recipe edit page img]()
+### Recipe delete page
+
+
+![recipe delete page img]()
 ### Error page
 
 ![error page img]()
